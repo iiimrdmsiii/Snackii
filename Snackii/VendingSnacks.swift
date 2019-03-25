@@ -9,5 +9,14 @@
 import Foundation
 
 struct VendingSnacks {
+    var food: [Food] = []
+    var drink: [Drink] = []
+}
+
+class Food {
+    
+}
+
+class Drink {
     
 }

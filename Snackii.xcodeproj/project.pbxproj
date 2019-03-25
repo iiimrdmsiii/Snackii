@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941038D93786495DA88C8E11 /* Pods_Snackii.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A279D8378482A39696FB59 /* Pods_Snackii.framework */; };
+		A04985F8224933D700150445 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A04985F7224933D700150445 /* GoogleService-Info.plist */; };
 		F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
 		F508EE512242946E0033DAAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE502242946E0033DAAD /* ViewController.swift */; };
 		F508EE542242946E0033DAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE522242946E0033DAAD /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02A279D8378482A39696FB59 /* Pods_Snackii.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snackii.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C86CB240C40FB777AEE7E7 /* Pods-Snackii.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.debug.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.debug.xcconfig"; sourceTree = "<group>"; };
+		A04985F7224933D700150445 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A564203CBCDC34B39D166143 /* Pods-Snackii.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.release.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.release.xcconfig"; sourceTree = "<group>"; };
 		F508EE4B2242946E0033DAAD /* Snackii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snackii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F508EE4E2242946E0033DAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F508EE502242946E0033DAAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941038D93786495DA88C8E11 /* Pods_Snackii.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4899F5B7A070F7745877207A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68C86CB240C40FB777AEE7E7 /* Pods-Snackii.debug.xcconfig */,
+				A564203CBCDC34B39D166143 /* Pods-Snackii.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8737AA48A6157D394DA52E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02A279D8378482A39696FB59 /* Pods_Snackii.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F508EE422242946E0033DAAD = {
 			isa = PBXGroup;
 			children = (
 				F508EE4D2242946E0033DAAD /* Snackii */,
 				F508EE4C2242946E0033DAAD /* Products */,
+				4899F5B7A070F7745877207A /* Pods */,
+				D8737AA48A6157D394DA52E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +89,7 @@
 				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
 				F508EE5A224294730033DAAD /* Info.plist */,
 				F508EE60224925B70033DAAD /* VendingSnacks.swift */,
+				A04985F7224933D700150445 /* GoogleService-Info.plist */,
 			);
 			path = Snackii;
 			sourceTree = "<group>";
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F508EE5D224294730033DAAD /* Build configuration list for PBXNativeTarget "Snackii" */;
 			buildPhases = (
+				12D7F03EE334715E24FAF4F2 /* [CP] Check Pods Manifest.lock */,
 				F508EE472242946E0033DAAD /* Sources */,
 				F508EE482242946E0033DAAD /* Frameworks */,
 				F508EE492242946E0033DAAD /* Resources */,
+				09B8D940967C0F359321ACAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +156,61 @@
 			files = (
 				F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */,
 				F508EE56224294730033DAAD /* Assets.xcassets in Resources */,
+				A04985F8224933D700150445 /* GoogleService-Info.plist in Resources */,
 				F508EE542242946E0033DAAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09B8D940967C0F359321ACAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Snackii/Pods-Snackii-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Snackii/Pods-Snackii-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12D7F03EE334715E24FAF4F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Snackii-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F508EE472242946E0033DAAD /* Sources */ = {
@@ -284,6 +363,7 @@
 		};
 		F508EE5E224294730033DAAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C86CB240C40FB777AEE7E7 /* Pods-Snackii.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +381,7 @@
 		};
 		F508EE5F224294730033DAAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A564203CBCDC34B39D166143 /* Pods-Snackii.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
