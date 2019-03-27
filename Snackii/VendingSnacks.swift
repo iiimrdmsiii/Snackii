@@ -10,4 +10,5 @@ import Foundation
 
 struct VendingSnacks {
     var image: String
+    
 }
