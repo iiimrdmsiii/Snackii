@@ -11,8 +11,9 @@
 		F508EE542242946E0033DAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE522242946E0033DAAD /* Main.storyboard */; };
 		F508EE56224294730033DAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F508EE55224294730033DAAD /* Assets.xcassets */; };
 		F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE57224294730033DAAD /* LaunchScreen.storyboard */; };
-		F508EE61224925B70033DAAD /* VendingSnacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE60224925B70033DAAD /* VendingSnacks.swift */; };
 		F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */; };
+		F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */; };
+		F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65E224D202A0091C320 /* SnackiiImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +23,9 @@
 		F508EE55224294730033DAAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F508EE58224294730033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F508EE5A224294730033DAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F508EE60224925B70033DAAD /* VendingSnacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingSnacks.swift; sourceTree = "<group>"; };
 		F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVendingItemsViewController.swift; sourceTree = "<group>"; };
+		F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F532D65E224D202A0091C320 /* SnackiiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackiiImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,22 @@
 			children = (
 				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
 				F508EE522242946E0033DAAD /* Main.storyboard */,
-				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
 				F508EE55224294730033DAAD /* Assets.xcassets */,
 				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
 				F508EE5A224294730033DAAD /* Info.plist */,
-				F508EE60224925B70033DAAD /* VendingSnacks.swift */,
+				F532D65B224D05B40091C320 /* CollectionImageCellSnackii */,
 			);
 			path = Snackii;
+			sourceTree = "<group>";
+		};
+		F532D65B224D05B40091C320 /* CollectionImageCellSnackii */ = {
+			isa = PBXGroup;
+			children = (
+				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
+				F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */,
+				F532D65E224D202A0091C320 /* SnackiiImages.swift */,
+			);
+			path = CollectionImageCellSnackii;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
+				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
+				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
 				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
-				F508EE61224925B70033DAAD /* VendingSnacks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
