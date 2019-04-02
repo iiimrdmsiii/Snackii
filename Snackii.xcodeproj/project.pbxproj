@@ -54,6 +54,7 @@
 				6434522E796DDC8EAE86FEA4 /* Pods-Snackii.debug.xcconfig */,
 				31DBF9315220358375ADF4EE /* Pods-Snackii.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
