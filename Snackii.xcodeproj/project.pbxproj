@@ -7,22 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2D86B5B04482F4454C08E2 /* Pods_Snackii.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B1E9612002590CE95183AE /* Pods_Snackii.framework */; };
+		A0622B61224BCDF400388CE5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0622B60224BCDF400388CE5 /* Login.storyboard */; };
+		A0622B63224BCE0C00388CE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0622B62224BCE0C00388CE5 /* Person.swift */; };
+		A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E73DFB2253A805003ED4A0 /* Snack.swift */; };
+		A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */; };
 		F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
-		F508EE542242946E0033DAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE522242946E0033DAAD /* Main.storyboard */; };
+		F508EE512242946E0033DAAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE502242946E0033DAAD /* ViewController.swift */; };
 		F508EE56224294730033DAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F508EE55224294730033DAAD /* Assets.xcassets */; };
 		F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE57224294730033DAAD /* LaunchScreen.storyboard */; };
+		F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F509A2CB2253BE22004FE37E /* Main.storyboard */; };
 		F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */; };
 		F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */; };
 		F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65E224D202A0091C320 /* SnackiiImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31DBF9315220358375ADF4EE /* Pods-Snackii.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.release.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.release.xcconfig"; sourceTree = "<group>"; };
+		62B1E9612002590CE95183AE /* Pods_Snackii.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snackii.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6434522E796DDC8EAE86FEA4 /* Pods-Snackii.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.debug.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.debug.xcconfig"; sourceTree = "<group>"; };
+		A0622B60224BCDF400388CE5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A0622B62224BCE0C00388CE5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A0E73DFB2253A805003ED4A0 /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
+		A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F508EE4B2242946E0033DAAD /* Snackii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snackii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F508EE4E2242946E0033DAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F508EE532242946E0033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F508EE502242946E0033DAAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F508EE55224294730033DAAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F508EE58224294730033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F508EE5A224294730033DAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F509A2CC2253BE22004FE37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVendingItemsViewController.swift; sourceTree = "<group>"; };
 		F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F532D65E224D202A0091C320 /* SnackiiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackiiImages.swift; sourceTree = "<group>"; };
@@ -33,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2D86B5B04482F4454C08E2 /* Pods_Snackii.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06DD047D91ACDFBBE7FDCD22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6434522E796DDC8EAE86FEA4 /* Pods-Snackii.debug.xcconfig */,
+				31DBF9315220358375ADF4EE /* Pods-Snackii.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5316E2B5E5B3A504A83258ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62B1E9612002590CE95183AE /* Pods_Snackii.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F508EE422242946E0033DAAD = {
 			isa = PBXGroup;
 			children = (
 				F508EE4D2242946E0033DAAD /* Snackii */,
 				F508EE4C2242946E0033DAAD /* Products */,
+				06DD047D91ACDFBBE7FDCD22 /* Pods */,
+				5316E2B5E5B3A504A83258ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,12 +92,17 @@
 		F508EE4D2242946E0033DAAD /* Snackii */ = {
 			isa = PBXGroup;
 			children = (
+				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
-				F508EE522242946E0033DAAD /* Main.storyboard */,
+				F508EE502242946E0033DAAD /* ViewController.swift */,
 				F508EE55224294730033DAAD /* Assets.xcassets */,
 				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
+				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
 				F508EE5A224294730033DAAD /* Info.plist */,
 				F532D65B224D05B40091C320 /* CollectionImageCellSnackii */,
+				A0622B60224BCDF400388CE5 /* Login.storyboard */,
+				A0622B62224BCE0C00388CE5 /* Person.swift */,
+				A0E73DFB2253A805003ED4A0 /* Snack.swift */,
 			);
 			path = Snackii;
 			sourceTree = "<group>";
@@ -85,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F508EE5D224294730033DAAD /* Build configuration list for PBXNativeTarget "Snackii" */;
 			buildPhases = (
+				68523FBF704C00793FD55E30 /* [CP] Check Pods Manifest.lock */,
 				F508EE472242946E0033DAAD /* Sources */,
 				F508EE482242946E0033DAAD /* Frameworks */,
 				F508EE492242946E0033DAAD /* Resources */,
+				276CD904B8AA61D8DA3DB7BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,12 +178,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */,
+				F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */,
 				F508EE56224294730033DAAD /* Assets.xcassets in Resources */,
-				F508EE542242946E0033DAAD /* Main.storyboard in Resources */,
+				A0622B61224BCDF400388CE5 /* Login.storyboard in Resources */,
+				A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		276CD904B8AA61D8DA3DB7BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Snackii/Pods-Snackii-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Snackii/Pods-Snackii-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68523FBF704C00793FD55E30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Snackii-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F508EE472242946E0033DAAD /* Sources */ = {
@@ -153,26 +257,30 @@
 				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
 				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
 				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
+				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
+				F508EE512242946E0033DAAD /* ViewController.swift in Sources */,
+				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
+				A0622B63224BCE0C00388CE5 /* Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F508EE522242946E0033DAAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F508EE532242946E0033DAAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F508EE57224294730033DAAD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F508EE58224294730033DAAD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F509A2CB2253BE22004FE37E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F509A2CC2253BE22004FE37E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -296,6 +404,7 @@
 		};
 		F508EE5E224294730033DAAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6434522E796DDC8EAE86FEA4 /* Pods-Snackii.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +422,7 @@
 		};
 		F508EE5F224294730033DAAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DBF9315220358375ADF4EE /* Pods-Snackii.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
