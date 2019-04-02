@@ -37,6 +37,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
 
     @IBOutlet weak var snackiiCollectionView: UICollectionView!
     @IBOutlet weak var addImageButtonItem: UIBarButtonItem!
+    @IBOutlet weak var saveImagesButtonItem: UIBarButtonItem!
     
     //*********************************************************
     // MARK: - Actions
@@ -80,8 +81,12 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func deleteImageButtonTapped(_ sender: Any) {
+    @IBAction func saveImagesButtonItemTapped(_ sender: Any) {
+        
+        
+        
     }
+    
     
     //*********************************************************
     // MARK: - Overrides and Methods

@@ -67,6 +67,11 @@
                         <viewLayoutGuide key="safeArea" id="aJD-db-XmW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Snackii" id="cxB-bJ-Oly">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="OZk-uB-01I">
+                            <connections>
+                                <action selector="saveImagesButtonItemTapped:" destination="tYM-un-ws9" id="Ak0-xN-7Uj"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IeC-NX-gt9">
                             <connections>
                                 <action selector="addImageFromPhoto:" destination="tYM-un-ws9" id="cbc-JA-I7q"/>
@@ -75,6 +80,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addImageButtonItem" destination="IeC-NX-gt9" id="e7S-WJ-S0Q"/>
+                        <outlet property="saveImagesButtonItem" destination="OZk-uB-01I" id="KiU-Ur-nNU"/>
                         <outlet property="snackiiCollectionView" destination="NJg-QL-uir" id="Dj3-D9-arD"/>
                     </connections>
                 </viewController>
