@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //*********************************************************
@@ -81,7 +82,9 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         dismiss(animated: true, completion: nil)
     }
     
+    // Will save the images and upload it up to firebase
     @IBAction func saveImagesButtonItemTapped(_ sender: Any) {
+        
         
         
         
@@ -107,13 +110,14 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let index = 0
-        snackiiImages.remove(at: index)
-        collectionView.allowsMultipleSelection = true
+        collectionView.deselectItem(at: indexPath, animated: true)
         
+        let index = 0
+        collectionView.allowsMultipleSelection = true
     
         if !(itemSelected.contains(indexPath)) {
             itemSelected.append(indexPath)
+            snackiiImages.remove(at: index)
         }
         
         let alert = UIAlertController(title: "Delete Alert", message: "Are you sure you want to delete this image?", preferredStyle: .alert)
@@ -124,7 +128,11 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        
+        
         self.present(alert, animated: true, completion: nil)
+            
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -135,10 +143,4 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         return cell
     }
-    
-    func deleteItem() {
-        
-        collectionCellImage?.snackiiImagesViews.delete(Any?.self)
-    }
-    
 }
