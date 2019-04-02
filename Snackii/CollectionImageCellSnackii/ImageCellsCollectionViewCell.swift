@@ -11,4 +11,5 @@ import UIKit
 class ImageCellsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var snackiiImagesViews: UIImageView!
+    
 }
