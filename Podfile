@@ -10,5 +10,7 @@ target 'Snackii' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
-  pod 'Firebase/Database'
+  pod 'FirebaseUI'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Twitter'
 end
