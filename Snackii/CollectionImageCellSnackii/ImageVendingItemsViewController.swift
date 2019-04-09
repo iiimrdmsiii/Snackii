@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 
 class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -15,6 +16,10 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     //*********************************************************
     // MARK: - Properties
     //*********************************************************
+    
+    var docRef: DocumentReference!
+    
+    var db: Firestore!
     
     var snackiiImage: SnackiiImage?
     
@@ -85,9 +90,32 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // Will save the images and upload it up to firebase
     @IBAction func saveImagesButtonItemTapped(_ sender: Any) {
         
-        
-        
-        
+        // alert if there are no Image
+        if snackiiImages.isEmpty {
+            
+            let alertImage = UIAlertController(title: "Picture", message: "Please add a photo", preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertImage.addAction(action)
+            
+            alertImage.popoverPresentationController?.sourceView = sender as? UIView
+            
+            present(alertImage, animated: true, completion: nil)
+            
+        } else {
+
+            // runs the image to save up to firebase.
+        for image in snackiiImages {
+                
+                // upload image to fb
+                uploadFirebaseImages(image) { (url) in
+                    guard let url = url else { return }
+                    self.saveImageToFirebase(snackiiImagesURL: url, completion: { success in
+                        
+                    })
+                }
+            }
+        }
     }
     
     
@@ -99,7 +127,83 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         super.viewDidLoad()
 
         snackiiCollectionView.reloadData()
+        
+        db = Firestore.firestore()
+        
+        docRef = db.document("snacks/uid/")
+        
 
+    }
+    
+    // Upload the image to Firebase
+    func uploadFirebaseImages(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
+        
+//        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
+        
+        let storageRef = Storage.storage().reference().child("snack/\(uid)")
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.25) else { return }
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        storageRef.putData(imageData, metadata: metaData) { (metaData, error) in
+            if error == nil, metaData != nil {
+                
+                // Success
+                storageRef.downloadURL(completion: { (url, error) in
+                    completion(url)
+                })
+                
+            } else {
+                // Fail
+                completion(nil)
+            }
+        }
+    }
+    
+    // Save the images to firebase
+    func saveImageToFirebase(snackiiImagesURL: URL, completion: @escaping((_ success: Bool) -> ())) {
+        print("SaveImageToFirebase has been saved!!!!!")
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Firestore.firestore().document("snacks/\(uid)")
+        
+        let userObjectImages = [
+            "imageURL": snackiiImagesURL.absoluteString
+        ] as [String:Any]
+        
+        databaseRef.setData(userObjectImages) { (error) in
+            completion(error == nil)
+            
+            // able to go to next UIview.
+            self.performSegue(withIdentifier: "<#T##String#>", sender: self)
+        }
+    }
+    
+    // Add a new document with a generated ID
+    // url String helps with creating a string for the image to have a place that the image can me saved.
+    private func firebaseWrite(url: String) {
+        var ref: DocumentReference? = nil
+        ref = db.collection("snacks").addDocument(data: [
+            "imageURL": url
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+        
+        db.collection("Snacks").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
     }
     
     
