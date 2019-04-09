@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="0sw-mo-4lG">
             <objects>
-                <viewController id="8H5-cO-vbw" sceneMemberID="viewController">
+                <viewController id="8H5-cO-vbw" customClass="IntroViewController" customModule="Snackii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8tS-R6-MCM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="LoginButtonTapped:" destination="8H5-cO-vbw" eventType="touchUpInside" id="WuF-RL-FjL"/>
                                     <action selector="LoginButtonTapped:" destination="KGn-yO-cMo" eventType="touchUpInside" id="h2t-4G-ESQ"/>
                                 </connections>
                             </button>
