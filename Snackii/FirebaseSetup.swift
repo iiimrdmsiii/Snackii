@@ -37,5 +37,11 @@ extension FirebaseSetup: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         // Do Something here
         print(authDataResult)
+        if authDataResult != nil {
+            let nextStoryBoard = UIStoryboard(name: "Login", bundle: nil)
+            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "GoHome") 
+            let appDelagate = UIApplication.shared.delegate as! AppDelegate
+            appDelagate.window?.rootViewController = nextViewController
+        }
     }
 }
