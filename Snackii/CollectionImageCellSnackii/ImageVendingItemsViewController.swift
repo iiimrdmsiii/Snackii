@@ -206,7 +206,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         }
     }
     
-    // Save the images to firebase
+    // Save the images to firebase hi
     func saveImageToFirebase(snackiiImagesURL: URL, completion: @escaping((_ success: Bool) -> ())) {
         print("SaveImageToFirebase has been saved!!!!!")
         guard let uid = Auth.auth().currentUser?.uid else { return }
