@@ -17,7 +17,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // MARK: - Properties
     //*********************************************************
     
-    
+    //
     
     var docRef: DocumentReference!
     
