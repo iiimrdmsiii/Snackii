@@ -17,6 +17,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // MARK: - Properties
     //*********************************************************
     
+    
+    
     var docRef: DocumentReference!
     
     var db: Firestore!
