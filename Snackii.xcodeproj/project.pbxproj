@@ -12,8 +12,9 @@
 		A0622B63224BCE0C00388CE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0622B62224BCE0C00388CE5 /* Person.swift */; };
 		A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E73DFB2253A805003ED4A0 /* Snack.swift */; };
 		A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */; };
+		A0EE504F225CEB4F00F9FAB2 /* FirebaseSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */; };
 		F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
-		F508EE512242946E0033DAAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE502242946E0033DAAD /* ViewController.swift */; };
+		F508EE512242946E0033DAAD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE502242946E0033DAAD /* IntroViewController.swift */; };
 		F508EE56224294730033DAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F508EE55224294730033DAAD /* Assets.xcassets */; };
 		F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE57224294730033DAAD /* LaunchScreen.storyboard */; };
 		F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F509A2CB2253BE22004FE37E /* Main.storyboard */; };
@@ -30,9 +31,10 @@
 		A0622B62224BCE0C00388CE5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A0E73DFB2253A805003ED4A0 /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 		A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSetup.swift; sourceTree = "<group>"; };
 		F508EE4B2242946E0033DAAD /* Snackii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snackii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F508EE4E2242946E0033DAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F508EE502242946E0033DAAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F508EE502242946E0033DAAD /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		F508EE55224294730033DAAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F508EE58224294730033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F508EE5A224294730033DAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 			children = (
 				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
-				F508EE502242946E0033DAAD /* ViewController.swift */,
+				F508EE502242946E0033DAAD /* IntroViewController.swift */,
 				F508EE55224294730033DAAD /* Assets.xcassets */,
 				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
 				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
@@ -103,6 +105,7 @@
 				A0622B60224BCDF400388CE5 /* Login.storyboard */,
 				A0622B62224BCE0C00388CE5 /* Person.swift */,
 				A0E73DFB2253A805003ED4A0 /* Snack.swift */,
+				A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */,
 			);
 			path = Snackii;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 				F508EE482242946E0033DAAD /* Frameworks */,
 				F508EE492242946E0033DAAD /* Resources */,
 				276CD904B8AA61D8DA3DB7BF /* [CP] Embed Pods Frameworks */,
+				CD9ACCE75D9962A1691695B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,10 +201,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Snackii/Pods-Snackii-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -210,10 +221,17 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -246,6 +264,44 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CD9ACCE75D9962A1691695B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Snackii/Pods-Snackii-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseEmailAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Snackii/Pods-Snackii-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,7 +314,7 @@
 				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
 				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
 				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
-				F508EE512242946E0033DAAD /* ViewController.swift in Sources */,
+				F508EE512242946E0033DAAD /* IntroViewController.swift in Sources */,
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
 				A0622B63224BCE0C00388CE5 /* Person.swift in Sources */,
 			);
