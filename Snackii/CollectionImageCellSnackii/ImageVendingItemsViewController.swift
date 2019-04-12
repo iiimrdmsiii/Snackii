@@ -17,8 +17,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // MARK: - Properties
     //*********************************************************
     
-    //
-    
     var docRef: DocumentReference!
     
     var db: Firestore!
@@ -42,7 +40,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // MARK: - Outlets
     //*********************************************************
     
-
     @IBOutlet weak var snackiiCollectionView: UICollectionView!
     @IBOutlet weak var addImageButtonItem: UIBarButtonItem!
     @IBOutlet weak var saveImagesButtonItem: UIBarButtonItem!
@@ -178,6 +175,36 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
 //
 //    }
     
+//    func getArrayOfImagesToFirebaseStorage(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
+//
+//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
+//
+//        //Create a reference to the image
+//        let imageRef = Storage.storage().reference().child("snack/\(uid)")
+//
+//        // Get image data
+//        if let uploadData = image.pngData() {
+//
+//            // Upload image to Firebase Cloud Storage
+//            imageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+//                guard error == nil else {
+//                    // Handle error
+//                    return
+//                }
+//                // Get full image url
+//                imageRef.downloadURL { (url, error) in
+//                    guard let downloadURL = url else {
+//                        // Handle error
+//                        return
+//                    }
+//
+//                    // Save url to database
+//                    Firestore.firestore().collection("snacks").document("").setData(["imageURL" : downloadURL.absoluteString])
+//                }
+//            }
+//        }
+//    }
+    
     
     
     // Upload the image to Firebase
@@ -186,7 +213,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
 //        guard let uid = Auth.auth().currentUser?.uid else {return}
         let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
-        let storageRef = Storage.storage().reference().child("snack/\(uid)")
+        let storageRef = Storage.storage().reference().child("snack/\([uid])")
         
         guard let imageData = image.jpegData(compressionQuality: 0.25) else { return }
         

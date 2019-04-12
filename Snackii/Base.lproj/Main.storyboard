@@ -13,7 +13,7 @@
         <!--Snackii-->
         <scene sceneID="4j3-cc-Lg3">
             <objects>
-                <viewController id="tYM-un-ws9" customClass="ImageVendingItemsViewController" customModule="Snackii" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SnackiiCollectionView" id="tYM-un-ws9" customClass="ImageVendingItemsViewController" customModule="Snackii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zZv-D1-hrs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
