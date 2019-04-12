@@ -17,7 +17,10 @@
 		F508EE512242946E0033DAAD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE502242946E0033DAAD /* IntroViewController.swift */; };
 		F508EE56224294730033DAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F508EE55224294730033DAAD /* Assets.xcassets */; };
 		F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE57224294730033DAAD /* LaunchScreen.storyboard */; };
-		F508EE61224925B70033DAAD /* VendingSnacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE60224925B70033DAAD /* VendingSnacks.swift */; };
+		F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F509A2CB2253BE22004FE37E /* Main.storyboard */; };
+		F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */; };
+		F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */; };
+		F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65E224D202A0091C320 /* SnackiiImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +38,10 @@
 		F508EE55224294730033DAAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F508EE58224294730033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F508EE5A224294730033DAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F508EE60224925B70033DAAD /* VendingSnacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingSnacks.swift; sourceTree = "<group>"; };
+		F509A2CC2253BE22004FE37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVendingItemsViewController.swift; sourceTree = "<group>"; };
+		F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F532D65E224D202A0091C320 /* SnackiiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackiiImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,19 +94,30 @@
 		F508EE4D2242946E0033DAAD /* Snackii */ = {
 			isa = PBXGroup;
 			children = (
+				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
 				F508EE502242946E0033DAAD /* IntroViewController.swift */,
 				F508EE55224294730033DAAD /* Assets.xcassets */,
 				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
 				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
 				F508EE5A224294730033DAAD /* Info.plist */,
-				F508EE60224925B70033DAAD /* VendingSnacks.swift */,
+				F532D65B224D05B40091C320 /* CollectionImageCellSnackii */,
 				A0622B60224BCDF400388CE5 /* Login.storyboard */,
 				A0622B62224BCE0C00388CE5 /* Person.swift */,
 				A0E73DFB2253A805003ED4A0 /* Snack.swift */,
 				A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */,
 			);
 			path = Snackii;
+			sourceTree = "<group>";
+		};
+		F532D65B224D05B40091C320 /* CollectionImageCellSnackii */ = {
+			isa = PBXGroup;
+			children = (
+				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
+				F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */,
+				F532D65E224D202A0091C320 /* SnackiiImages.swift */,
+			);
+			path = CollectionImageCellSnackii;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */,
+				F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */,
 				F508EE56224294730033DAAD /* Assets.xcassets in Resources */,
 				A0622B61224BCDF400388CE5 /* Login.storyboard in Resources */,
 				A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */,
@@ -291,12 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0EE504F225CEB4F00F9FAB2 /* FirebaseSetup.swift in Sources */,
+				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
+				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
+				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
+				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
 				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
 				F508EE512242946E0033DAAD /* IntroViewController.swift in Sources */,
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
 				A0622B63224BCE0C00388CE5 /* Person.swift in Sources */,
-				F508EE61224925B70033DAAD /* VendingSnacks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +329,14 @@
 				F508EE58224294730033DAAD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F509A2CB2253BE22004FE37E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F509A2CC2253BE22004FE37E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
