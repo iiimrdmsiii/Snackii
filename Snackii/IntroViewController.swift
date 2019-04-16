@@ -22,11 +22,18 @@ class IntroViewController: UIViewController {
             show(authViewController, sender: sender)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        let handle = Auth.auth().addStateDidChangeListener({ (Auth, User) in
+            // do something
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(handle!)
+    }
 }
 

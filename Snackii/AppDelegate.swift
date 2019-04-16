@@ -9,17 +9,22 @@
 import UIKit
 import Firebase
 import FirebaseUI
+import FirebaseFirestore
+import FirebaseStorage
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let firebaseSetup = FirebaseSetup()
+    let userDefault = UserDefaults()
+    
+   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        firebaseSetup.setupFirebase()
+        FirebaseApp.configure()
         
         return true
     }
