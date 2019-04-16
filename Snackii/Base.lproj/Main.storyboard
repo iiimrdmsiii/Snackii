@@ -13,7 +13,7 @@
         <!--Snackii-->
         <scene sceneID="4j3-cc-Lg3">
             <objects>
-                <viewController id="tYM-un-ws9" customClass="ImageVendingItemsViewController" customModule="Snackii" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SnackiiCollectionView" id="tYM-un-ws9" customClass="ImageVendingItemsViewController" customModule="Snackii" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zZv-D1-hrs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bfo-yT-eFJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F4d-BZ-xkG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="GoHome" automaticallyAdjustsScrollViewInsets="NO" id="F4d-BZ-xkG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0P4-1m-xup">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
