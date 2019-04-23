@@ -35,11 +35,11 @@ class FirebaseSetup: NSObject {
 // MARK: - FUIAuthDelegate Implementation
 extension FirebaseSetup: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        // Do Something here
+        // print results and segue into vending controller
         print(authDataResult)
         if authDataResult != nil {
-            let nextStoryBoard = UIStoryboard(name: "Login", bundle: nil)
-            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "GoHome") 
+            let nextStoryBoard = UIStoryboard(name: "VendingSnacks", bundle: nil)
+            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "Vending") 
             let appDelagate = UIApplication.shared.delegate as! AppDelegate
             appDelagate.window?.rootViewController = nextViewController
         }

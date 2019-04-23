@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let firebaseSetup = FirebaseSetup()
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        firebaseSetup.setupFirebase()
+        FirebaseApp.configure()
         
         return true
     }
@@ -44,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    //func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         // Called when another application tries to open our application
-        return firebaseSetup.handleOpenURL(url: url, options: options)
-    }
+        //return firebaseSetup.handleOpenURL(url: url, options: options)
+    //}
 }

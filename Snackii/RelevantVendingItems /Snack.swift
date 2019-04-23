@@ -7,17 +7,24 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseDatabase
 
-class Drinks{
-    
+protocol Snack {
+    var name: String { get }
+    var image: String { get }
 }
 
-class Food {
-    
+struct Drink: Snack {
+    let name: String
+    let image: String
 }
 
-class Snack {
-    let drinks: [Drinks] = []
-    let food: [Food] = []
+struct Food: Snack {
+    let name: String
+    let image: String
 }
+
+
+
 
