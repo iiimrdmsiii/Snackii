@@ -218,18 +218,35 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         collectionView.deselectItem(at: indexPath, animated: true)
         
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        //        guard let uid = Auth.auth().currentUser?.uid else {return}
+        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
+        
+        let storageDelete = storageRef.child("snack/\(uid)/\(UUID().uuidString)")
+        
         let index = 0
         collectionView.allowsMultipleSelection = true
     
         if !(itemSelected.contains(indexPath)) {
             itemSelected.append(indexPath)
             snackiiImages.remove(at: index)
+            
+            storageDelete.delete {
+                error in
+                if let error = error {
+                    print("Oh no!!! it has an issue with: \(error)")
+                } else {
+                    print("File deleted succefully")
+                }
+            }
         }
         
         let alert = UIAlertController(title: "Delete Alert", message: "Are you sure you want to delete this image?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Delete", style: .default) { (_) in
             collectionView.deleteItems(at: [indexPath])
+            
         })
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -248,15 +265,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         
         return cell
-    }
-    
-    // catches the error to alert you for signing up.
-    func restForm() {
-        
-        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        
     }
 }
 
