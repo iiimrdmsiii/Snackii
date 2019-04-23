@@ -17,8 +17,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // MARK: - Properties
     //*********************************************************
     
-    
-    
     var docRef: DocumentReference!
     
     var db: Firestore!
@@ -134,7 +132,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         docRef = db.document("snacks/uid/")
 
-
     }
     
     
@@ -166,8 +163,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             }
         }
     }
-    
-    // Save the images to firebase hi
+    // Save the images to firebase
     func saveImageToFirebase(snackiiImagesURL: URL, completion: @escaping((_ success: Bool) -> ())) {
         print("SaveImageToFirebase has been saved!!!!!")
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -268,83 +264,10 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "settings", let settingsVC = segue.destination as? SettingViewController {
+            settingsVC.addAndSaveImagesIsHidden = self
+        }
+    }
 }
-
-
-//*********************************************************
-// MARK: - Others
-//*********************************************************
-
-//    @objc func handleSave() {
-//
-//        guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
-//
-//        // Upload the profile image to Firebase Storage
-//        self.uploadFirebaseImages(image) { url in
-//
-//            if let url = url {
-//                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-//
-//                changeRequest?.photoURL = url
-//
-//                // write ther string of the image
-//                self.firebaseWrite(url: url.absoluteString)
-//
-//                changeRequest?.commitChanges { error in
-//                    if error == nil {
-//                        print("image Display change")
-//
-//                        // save the image data to firebase database
-//                        self.saveImageToFirebase(snackiiImagesURL: url) { success in
-//                            if success {
-//                                self.dismiss(animated: true, completion: nil)
-//                            } else {
-//                                self.restForm()
-//                            }
-//                        }
-//                    } else {
-//                        print("Error: \(error!.localizedDescription)")
-//                        self.restForm()
-//                    }
-//                }
-//
-//
-//            } else {
-//                self.restForm()
-//            }
-//        }
-//
-//    }
-
-//    func getArrayOfImagesToFirebaseStorage(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
-//
-//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
-//
-//        //Create a reference to the image
-//        let imageRef = Storage.storage().reference().child("snack/\(uid)")
-//
-//        // Get image data
-//        if let uploadData = image.pngData() {
-//
-//            // Upload image to Firebase Cloud Storage
-//            imageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-//                guard error == nil else {
-//                    // Handle error
-//                    return
-//                }
-//                // Get full image url
-//                imageRef.downloadURL { (url, error) in
-//                    guard let downloadURL = url else {
-//                        // Handle error
-//                        return
-//                    }
-//
-//                    // Save url to database
-//                    Firestore.firestore().collection("snacks").document("").setData(["imageURL" : downloadURL.absoluteString])
-//                }
-//            }
-//        }
-//    }
-
-
-
