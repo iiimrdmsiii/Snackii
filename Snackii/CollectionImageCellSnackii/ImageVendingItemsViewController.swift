@@ -242,7 +242,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         //        guard let uid = Auth.auth().currentUser?.uid else {return}
         let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
-        let storageDelete = storageRef.child("snack/\(uid)/\()")
+//        let storageDelete = storageRef.child("snack/\(uid)/\()")
         
         let index = 0
         collectionView.allowsMultipleSelection = true
