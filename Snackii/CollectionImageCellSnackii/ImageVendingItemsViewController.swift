@@ -28,6 +28,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     let snackii = [""]
  
     var snackiiImages = [UIImage]()
+    // var snacks = [Snack]
     
     var imagePicker: UIImagePickerController!
     
@@ -134,6 +135,18 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
 
     }
     
+//    func deleteImageFireStorage() {
+//
+//        let storage = Storage.storage()
+//
+//        let storageRef = storage.reference()
+//
+//        let imagesRef = storageRef.child("snack/uid/\(UUID().uuidString)")
+//
+//        var spaceRef = storageRef.child("image/jpg")
+//
+//    }
+    
     
     // Upload the image to Firebase
     func uploadFirebaseImages(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
@@ -154,6 +167,10 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
                 
                 // Success
                 storageRef.downloadURL(completion: { (url, error) in
+                    guard error == nil else {
+                        completion(nil)
+                        return
+                    }
                     completion(url)
                 })
                 
@@ -182,7 +199,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     }
     
     // Add a new document with a generated ID
-    // url String helps with creating a string for the image to have a place that the image can me saved.
+    // url String helps with creating a string for the image to have a place that the image can be saved.
     private func firebaseWrite(url: String) {
         var ref: DocumentReference? = nil
         ref = db.collection("snacks").addDocument(data: [
@@ -212,16 +229,20 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         return snackiiImages.count
     }
     
+    // able to select an image and delete it.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         collectionView.deselectItem(at: indexPath, animated: true)
         
         let storage = Storage.storage()
         let storageRef = storage.reference()
+        
+        // let downloadURL = snacks[indexPath.row].downloadURL
+        
         //        guard let uid = Auth.auth().currentUser?.uid else {return}
         let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
-        let storageDelete = storageRef.child("snack/\(uid)/\(UUID().uuidString)")
+        let storageDelete = storageRef.child("snack/\(uid)/\()")
         
         let index = 0
         collectionView.allowsMultipleSelection = true

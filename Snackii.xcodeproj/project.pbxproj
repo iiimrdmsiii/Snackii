@@ -21,6 +21,7 @@
 		F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */; };
 		F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */; };
 		F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65E224D202A0091C320 /* SnackiiImages.swift */; };
+		F5C29E332270BE230054ED17 /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C29E322270BE230054ED17 /* Snack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVendingItemsViewController.swift; sourceTree = "<group>"; };
 		F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F532D65E224D202A0091C320 /* SnackiiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackiiImages.swift; sourceTree = "<group>"; };
+		F5C29E322270BE230054ED17 /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
 				F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */,
 				F532D65E224D202A0091C320 /* SnackiiImages.swift */,
+				F5C29E322270BE230054ED17 /* Snack.swift */,
 				F50CC67F226E04950075B905 /* SettingViewController.swift */,
 				F50CC681226F52960075B905 /* StoryBoard */,
 			);
@@ -268,6 +271,7 @@
 				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
 				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
 				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
+				F5C29E332270BE230054ED17 /* Snack.swift in Sources */,
 				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
 				F50CC680226E04950075B905 /* SettingViewController.swift in Sources */,
 				F508EE512242946E0033DAAD /* ViewController.swift in Sources */,
