@@ -125,9 +125,12 @@
 		F508EE4D2242946E0033DAAD /* Snackii */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
 				A0245FF7226A1BAA00237FBF /* LogIn Features */,
 				A0245FF6226A1B7800237FBF /* RelevantVendingItems  */,
 				F509A2CB2253BE22004FE37E /* Main.storyboard */,
+>>>>>>> develop
 				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
 				F508EE502242946E0033DAAD /* IntroViewController.swift */,
 				F508EE55224294730033DAAD /* Assets.xcassets */,
@@ -355,12 +358,22 @@
 				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
 				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
 				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
+<<<<<<< HEAD
 				F50CC680226E04950075B905 /* SettingViewController.swift in Sources */,
 				F508EE512242946E0033DAAD /* ViewController.swift in Sources */,
+=======
+<<<<<<< HEAD
+				F5C29E332270BE230054ED17 /* Snack.swift in Sources */,
+				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
+				F50CC680226E04950075B905 /* SettingViewController.swift in Sources */,
+				F508EE512242946E0033DAAD /* ViewController.swift in Sources */,
+=======
+>>>>>>> 3cdfb9381cb49725c71e1e0b0c6a392b7f6711ad
 				A0245FFC226A1C8000237FBF /* VendingMachineCollectionViewCell.swift in Sources */,
 				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
 				F508EE512242946E0033DAAD /* IntroViewController.swift in Sources */,
 				A0245FF8226A1BC900237FBF /* FirebaseSetup.swift in Sources */,
+>>>>>>> develop
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
 				A0622B63224BCE0C00388CE5 /* Person.swift in Sources */,
 			);

@@ -19,7 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NJg-QL-uir">
+<<<<<<< HEAD:Snackii/CollectionImageCellSnackii/StoryBoard/Base.lproj/Main.storyboard
                                 <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+=======
+<<<<<<< HEAD:Snackii/CollectionImageCellSnackii/StoryBoard/Base.lproj/Main.storyboard
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+=======
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+>>>>>>> develop:Snackii/Base.lproj/Main.storyboard
+>>>>>>> 3cdfb9381cb49725c71e1e0b0c6a392b7f6711ad:Snackii/CollectionImageCellSnackii/StoryBoard/Base.lproj/Main.storyboard
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f6n-8o-Gee">
                                     <size key="itemSize" width="160" height="160"/>
@@ -144,16 +152,30 @@
         <!--Item-->
         <scene sceneID="bfo-yT-eFJ">
             <objects>
+<<<<<<< HEAD:Snackii/CollectionImageCellSnackii/StoryBoard/Base.lproj/Main.storyboard
+                <navigationController storyboardIdentifier="GoHome" automaticallyAdjustsScrollViewInsets="NO" id="F4d-BZ-xkG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="y5z-NJ-tOP"/>
+=======
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F4d-BZ-xkG" sceneMemberID="viewController">
+>>>>>>> develop:Snackii/Base.lproj/Main.storyboard
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0P4-1m-xup">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+<<<<<<< HEAD:Snackii/CollectionImageCellSnackii/StoryBoard/Base.lproj/Main.storyboard
                     <connections>
                         <segue destination="tYM-un-ws9" kind="relationship" relationship="rootViewController" id="u1n-Sx-5vG"/>
                     </connections>
+=======
+<<<<<<< HEAD:Snackii/CollectionImageCellSnackii/StoryBoard/Base.lproj/Main.storyboard
+                    <connections>
+                        <segue destination="tYM-un-ws9" kind="relationship" relationship="rootViewController" id="u1n-Sx-5vG"/>
+                    </connections>
+=======
+>>>>>>> develop:Snackii/Base.lproj/Main.storyboard
+>>>>>>> 3cdfb9381cb49725c71e1e0b0c6a392b7f6711ad:Snackii/CollectionImageCellSnackii/StoryBoard/Base.lproj/Main.storyboard
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tw-Ft-JSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
