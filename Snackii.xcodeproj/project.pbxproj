@@ -14,6 +14,7 @@
 		A0245FFC226A1C8000237FBF /* VendingMachineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */; };
 		A0622B61224BCDF400388CE5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0622B60224BCDF400388CE5 /* Login.storyboard */; };
 		A0622B63224BCE0C00388CE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0622B62224BCE0C00388CE5 /* Person.swift */; };
+		A0849D3A22736A9C001B7843 /* OrderConfermationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0849D3922736A9C001B7843 /* OrderConfermationViewController.swift */; };
 		A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E73DFB2253A805003ED4A0 /* Snack.swift */; };
 		A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */; };
 		F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineCollectionViewCell.swift; sourceTree = "<group>"; };
 		A0622B60224BCDF400388CE5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A0622B62224BCE0C00388CE5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A0849D3922736A9C001B7843 /* OrderConfermationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfermationViewController.swift; sourceTree = "<group>"; };
 		A0E73DFB2253A805003ED4A0 /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 		A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSetup.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				A0245FF4226A1B1E00237FBF /* VendingItems.storyboard */,
 				A0245FF9226A1BFB00237FBF /* VendingMachineCollectionViewController.swift */,
 				A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */,
+				A0849D3922736A9C001B7843 /* OrderConfermationViewController.swift */,
 			);
 			path = "RelevantVendingItems ";
 			sourceTree = "<group>";
@@ -93,6 +96,7 @@
 		A0245FF7226A1BAA00237FBF /* LogIn Features */ = {
 			isa = PBXGroup;
 			children = (
+				F508EE502242946E0033DAAD /* IntroViewController.swift */,
 				A0622B62224BCE0C00388CE5 /* Person.swift */,
 				A0622B60224BCDF400388CE5 /* Login.storyboard */,
 				A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */,
@@ -125,7 +129,6 @@
 				A0245FF6226A1B7800237FBF /* RelevantVendingItems  */,
 				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
-				F508EE502242946E0033DAAD /* IntroViewController.swift */,
 				F508EE55224294730033DAAD /* Assets.xcassets */,
 				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
 				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
@@ -339,6 +342,7 @@
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
 				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
 				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
+				A0849D3A22736A9C001B7843 /* OrderConfermationViewController.swift in Sources */,
 				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
 				A0245FFC226A1C8000237FBF /* VendingMachineCollectionViewCell.swift in Sources */,
 				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
