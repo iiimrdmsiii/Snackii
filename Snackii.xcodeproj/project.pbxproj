@@ -45,11 +45,9 @@
 		F508EE58224294730033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F508EE5A224294730033DAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F509A2CC2253BE22004FE37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F50CC67F226E04950075B905 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVendingItemsViewController.swift; sourceTree = "<group>"; };
 		F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F532D65E224D202A0091C320 /* SnackiiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackiiImages.swift; sourceTree = "<group>"; };
-		F5C29E322270BE230054ED17 /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +123,7 @@
 			children = (
 				A0245FF7226A1BAA00237FBF /* LogIn Features */,
 				A0245FF6226A1B7800237FBF /* RelevantVendingItems  */,
+				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
 				F508EE502242946E0033DAAD /* IntroViewController.swift */,
 				F508EE55224294730033DAAD /* Assets.xcassets */,
@@ -136,23 +135,12 @@
 			path = Snackii;
 			sourceTree = "<group>";
 		};
-		F50CC681226F52960075B905 /* StoryBoard */ = {
-			isa = PBXGroup;
-			children = (
-				F509A2CB2253BE22004FE37E /* Main.storyboard */,
-			);
-			path = StoryBoard;
-			sourceTree = "<group>";
-		};
 		F532D65B224D05B40091C320 /* CollectionImageCellSnackii */ = {
 			isa = PBXGroup;
 			children = (
 				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
 				F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */,
 				F532D65E224D202A0091C320 /* SnackiiImages.swift */,
-				F5C29E322270BE230054ED17 /* Snack.swift */,
-				F50CC67F226E04950075B905 /* SettingViewController.swift */,
-				F50CC681226F52960075B905 /* StoryBoard */,
 			);
 			path = CollectionImageCellSnackii;
 			sourceTree = "<group>";

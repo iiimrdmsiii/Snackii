@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NJg-QL-uir">
-                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f6n-8o-Gee">
                                     <size key="itemSize" width="160" height="160"/>
@@ -56,25 +56,11 @@
                                     <outlet property="delegate" destination="tYM-un-ws9" id="h60-mj-sob"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfd-Q0-d0F">
-                                <rect key="frame" x="100" y="615" width="175" height="42"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Admin Only">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ovn-NZ-4De" kind="show" identifier="settings" id="jpG-7o-Kjj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aJD-db-XmW" firstAttribute="bottom" secondItem="Wfd-Q0-d0F" secondAttribute="bottom" constant="10" id="Hk4-U2-cya"/>
                             <constraint firstItem="NJg-QL-uir" firstAttribute="leading" secondItem="aJD-db-XmW" secondAttribute="leading" id="IcI-z5-hKE"/>
-                            <constraint firstItem="aJD-db-XmW" firstAttribute="trailing" secondItem="Wfd-Q0-d0F" secondAttribute="trailing" constant="100" id="QLX-Qn-3lA"/>
-                            <constraint firstItem="Wfd-Q0-d0F" firstAttribute="leading" secondItem="aJD-db-XmW" secondAttribute="leading" constant="100" id="Rmw-sp-K03"/>
-                            <constraint firstItem="aJD-db-XmW" firstAttribute="bottom" secondItem="NJg-QL-uir" secondAttribute="bottom" constant="50" id="adE-Is-Yk1"/>
+                            <constraint firstItem="aJD-db-XmW" firstAttribute="bottom" secondItem="NJg-QL-uir" secondAttribute="bottom" id="adE-Is-Yk1"/>
                             <constraint firstItem="NJg-QL-uir" firstAttribute="top" secondItem="aJD-db-XmW" secondAttribute="top" id="et4-os-r3t"/>
                             <constraint firstItem="aJD-db-XmW" firstAttribute="trailing" secondItem="NJg-QL-uir" secondAttribute="trailing" id="zOv-zg-vZ4"/>
                         </constraints>
@@ -100,52 +86,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6XS-gN-v66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3368.8000000000002" y="-533.88305847076469"/>
+            <point key="canvasLocation" x="1452" y="210.04497751124438"/>
         </scene>
-        <!--Setting View Controller-->
-        <scene sceneID="X75-46-Sas">
-            <objects>
-                <viewController id="Ovn-NZ-4De" customClass="SettingViewController" customModule="Snackii" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6Nc-9s-mI9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activate Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-mY-skk">
-                                <rect key="frame" x="16" y="112" width="207.5" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ovq-Ch-l2l">
-                                <rect key="frame" x="308" y="116" width="51" height="31"/>
-                                <connections>
-                                    <action selector="adminSwitch:" destination="Ovn-NZ-4De" eventType="valueChanged" id="mgw-Fz-DPZ"/>
-                                </connections>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Ovq-Ch-l2l" firstAttribute="top" secondItem="FcB-GY-uFj" secondAttribute="top" constant="52" id="4hW-15-9jh"/>
-                            <constraint firstItem="FcB-GY-uFj" firstAttribute="trailing" secondItem="Ovq-Ch-l2l" secondAttribute="trailing" constant="18" id="BO9-xT-N0m"/>
-                            <constraint firstItem="4z3-mY-skk" firstAttribute="leading" secondItem="FcB-GY-uFj" secondAttribute="leading" constant="16" id="TG7-3z-Sso"/>
-                            <constraint firstItem="4z3-mY-skk" firstAttribute="top" secondItem="FcB-GY-uFj" secondAttribute="top" constant="48" id="mAo-JP-89I"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FcB-GY-uFj"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pA4-M8-Z9F"/>
-                    <connections>
-                        <outlet property="onOrOffSwitch" destination="Ovq-Ch-l2l" id="D51-0r-iff"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M7u-Jk-kQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3368.8000000000002" y="361.16941529235385"/>
-        </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="bfo-yT-eFJ">
             <objects>
-                <navigationController storyboardIdentifier="GoHome" automaticallyAdjustsScrollViewInsets="NO" id="F4d-BZ-xkG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="y5z-NJ-tOP"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F4d-BZ-xkG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0P4-1m-xup">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -155,7 +101,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tw-Ft-JSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="-534"/>
+            <point key="canvasLocation" x="512.79999999999995" y="209.14542728635683"/>
         </scene>
     </scenes>
 </document>
