@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct Person {
+struct Person: Equatable {
     let name: String
     let email: String
     let password: String
+    var Admin = false
 }
 
-struct People {
-    var people: [Person]
-}

@@ -28,8 +28,9 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     let snackii = [""]
  
     var snackiiImages = [UIImage]()
-    
+
     var snacks = [Snack]()
+
     
     var imagePicker: UIImagePickerController!
     
@@ -134,6 +135,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         docRef = db.document("snacks/uid/")
 
+
     }
     
     // Upload the image to Firebase
@@ -155,10 +157,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
                 
                 // Success
                 storageRef.downloadURL(completion: { (url, error) in
-                    guard error == nil else {
-                        completion(nil)
-                        return
-                    }
                     completion(url)
                 })
                 
@@ -168,7 +166,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             }
         }
     }
-    // Save the images to firebase
+    
+    // Save the images to firebase hi
     func saveImageToFirebase(snackiiImagesURL: URL, completion: @escaping((_ success: Bool) -> ())) {
         print("SaveImageToFirebase has been saved!!!!!")
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -187,7 +186,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     }
     
     // Add a new document with a generated ID
-    // url String helps with creating a string for the image to have a place that the image can be saved.
+    // url String helps with creating a string for the image to have a place that the image can me saved.
     private func firebaseWrite(url: String) {
         var ref: DocumentReference? = nil
         ref = db.collection("snacks").addDocument(data: [
@@ -217,14 +216,13 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         return snackiiImages.count
     }
     
-    // able to select an image and delete it.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         collectionView.deselectItem(at: indexPath, animated: true)
         
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        
+
         let downloadURL = snacks[indexPath.row]
         
         //        guard let uid = Auth.auth().currentUser?.uid else {return}
@@ -299,4 +297,84 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             }
         }
     }
+
 }
+
+
+//*********************************************************
+// MARK: - Others
+//*********************************************************
+
+//    @objc func handleSave() {
+//
+//        guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
+//
+//        // Upload the profile image to Firebase Storage
+//        self.uploadFirebaseImages(image) { url in
+//
+//            if let url = url {
+//                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+//
+//                changeRequest?.photoURL = url
+//
+//                // write ther string of the image
+//                self.firebaseWrite(url: url.absoluteString)
+//
+//                changeRequest?.commitChanges { error in
+//                    if error == nil {
+//                        print("image Display change")
+//
+//                        // save the image data to firebase database
+//                        self.saveImageToFirebase(snackiiImagesURL: url) { success in
+//                            if success {
+//                                self.dismiss(animated: true, completion: nil)
+//                            } else {
+//                                self.restForm()
+//                            }
+//                        }
+//                    } else {
+//                        print("Error: \(error!.localizedDescription)")
+//                        self.restForm()
+//                    }
+//                }
+//
+//
+//            } else {
+//                self.restForm()
+//            }
+//        }
+//
+//    }
+
+//    func getArrayOfImagesToFirebaseStorage(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
+//
+//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
+//
+//        //Create a reference to the image
+//        let imageRef = Storage.storage().reference().child("snack/\(uid)")
+//
+//        // Get image data
+//        if let uploadData = image.pngData() {
+//
+//            // Upload image to Firebase Cloud Storage
+//            imageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+//                guard error == nil else {
+//                    // Handle error
+//                    return
+//                }
+//                // Get full image url
+//                imageRef.downloadURL { (url, error) in
+//                    guard let downloadURL = url else {
+//                        // Handle error
+//                        return
+//                    }
+//
+//                    // Save url to database
+//                    Firestore.firestore().collection("snacks").document("").setData(["imageURL" : downloadURL.absoluteString])
+//                }
+//            }
+//        }
+//    }
+
+
+
