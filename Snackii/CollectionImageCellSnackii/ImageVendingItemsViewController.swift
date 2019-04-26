@@ -28,6 +28,9 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     let snackii = [""]
  
     var snackiiImages = [UIImage]()
+
+    var snacks = [Snack]()
+
     
     var imagePicker: UIImagePickerController!
     
@@ -39,6 +42,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     //*********************************************************
     // MARK: - Outlets
     //*********************************************************
+    
     
     @IBOutlet weak var snackiiCollectionView: UICollectionView!
     @IBOutlet weak var addImageButtonItem: UIBarButtonItem!
@@ -105,7 +109,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             
             // runs the image to save up to firebase.
             // upload image to fb
-            
             for image in snackiiImages {
                 
                 uploadFirebaseImages(image) { (url) in
@@ -134,7 +137,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
 
 
     }
-    
     
     // Upload the image to Firebase
     func uploadFirebaseImages(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
@@ -220,10 +222,13 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         let storage = Storage.storage()
         let storageRef = storage.reference()
+
+        let downloadURL = snacks[indexPath.row]
+        
         //        guard let uid = Auth.auth().currentUser?.uid else {return}
         let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
-        let storageDelete = storageRef.child("snack/\(uid)/\(UUID().uuidString)")
+        let storageDelete = storageRef.child("snack/\(uid)/")
         
         let index = 0
         collectionView.allowsMultipleSelection = true
@@ -266,6 +271,33 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "settings", let settingsVC = segue.destination as? SettingViewController {
+            settingsVC.addAndSaveImagesIsHidden = self
+        }
+    }
+    
+    //*********************************************************
+    // MARK: - Database Cloud FireStore
+    //*********************************************************
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    func updateSnackiiImages(from url: URL) {
+        print("Start Download images")
+        getData(from: url) {data, response, error in
+            guard let data = data, error == nil else {return}
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Finished download")
+            DispatchQueue.main.async {
+                self.collectionCellImage?.snackiiImagesViews.image = UIImage(data: data)
+            }
+        }
+    }
+
 }
 
 
