@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 Snackii.xcworkspace/xcuserdata
 .DS_Store
 Snackii.xcodeproj/xcuserdata
 xuserdata
+=======
+# OS generated files #
+.DS_Store
+Thumbs.db
+
+# XCode files #
+xcuserdata
+build
+*.xcscmblueprint
+derivedData
+
+>>>>>>> d8f1ae51e5cb27cff2aa075b1c2128f8b25bade7
