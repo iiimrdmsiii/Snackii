@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.752515"
+            timestampString = "578332599.105968"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "uploadFirebaseImages(_:completion:)"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "saveImagesButtonItemTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.754845"
+            timestampString = "578332599.1089441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "saveImageToFirebase(snackiiImagesURL:completion:)"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "saveImagesButtonItemTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.755525"
+            timestampString = "578332599.109393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "firebaseWrite(url:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,12 +58,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.7560869"
+            timestampString = "578332599.109825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "saveImagesButtonItemTapped(_:)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "ImageVendingItemsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
+            timestampString = "578332599.110273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.756583"
+            timestampString = "578332599.110711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "uploadFirebaseImages(_:completion:)"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "saveImageToFirebase(snackiiImagesURL:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,45 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.75709"
+            timestampString = "578332599.111113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
-            landmarkName = "uploadFirebaseImages(_:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Snackii.ImageVendingItemsViewController.uploadFirebaseImages(_: __C.UIImage, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Snackii"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dallinsmuin/Project/Snackii/Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-                  timestampString = "576769497.001802"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "198"
-                  endingLineNumber = "198"
-                  offsetFromSymbolStart = "366">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Snackii.ImageVendingItemsViewController.uploadFirebaseImages(_: __C.UIImage, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Snackii"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dallinsmuin/Project/Snackii/Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-                  timestampString = "576769497.003426"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "199"
-                  endingLineNumber = "199"
-                  offsetFromSymbolStart = "42">
-               </Location>
-            </Locations>
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "ImageVendingItemsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.757531"
+            timestampString = "578332599.111545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "uploadFirebaseImages(_:completion:)"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "firebaseWrite(url:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,157 +138,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.758906"
+            timestampString = "578332599.111974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "uploadFirebaseImages(_:completion:)"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Snackii.ImageVendingItemsViewController.uploadFirebaseImages(_: __C.UIImage, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Snackii"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dallinsmuin/Project/Snackii/Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-                  timestampString = "576769497.012287"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "194"
-                  endingLineNumber = "194"
-                  offsetFromSymbolStart = "1092">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Snackii.ImageVendingItemsViewController.uploadFirebaseImages(_: __C.UIImage, completion: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Snackii"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dallinsmuin/Project/Snackii/Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-                  timestampString = "576769497.013862"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
-                  offsetFromSymbolStart = "57">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.7602561"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "uploadFirebaseImages(_:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.760837"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "saveImagesButtonItemTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.762077"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "uploadFirebaseImages(_:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.763428"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "saveImagesButtonItemTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-            timestampString = "576769495.763857"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "saveImagesButtonItemTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Snackii.ImageVendingItemsViewController.saveImagesButtonItemTapped(Any) -&gt; ()"
-                  moduleName = "Snackii"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dallinsmuin/Project/Snackii/Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-                  timestampString = "576769497.0331089"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "1280">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in Snackii.ImageVendingItemsViewController.saveImagesButtonItemTapped(Any) -&gt; ()"
-                  moduleName = "Snackii"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dallinsmuin/Project/Snackii/Snackii/CollectionImageCellSnackii/ImageVendingItemsViewController.swift"
-                  timestampString = "576769497.035169"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "42">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

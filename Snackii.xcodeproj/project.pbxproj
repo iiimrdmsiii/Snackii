@@ -8,41 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		0D2D86B5B04482F4454C08E2 /* Pods_Snackii.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B1E9612002590CE95183AE /* Pods_Snackii.framework */; };
-		A0245FED2264D22700237FBF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0245FEC2264D22700237FBF /* SignInController.swift */; };
-		A0622B61224BCDF400388CE5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0622B60224BCDF400388CE5 /* Login.storyboard */; };
-		A0622B63224BCE0C00388CE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0622B62224BCE0C00388CE5 /* Person.swift */; };
-		A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E73DFB2253A805003ED4A0 /* Snack.swift */; };
+		A0245FF5226A1B1E00237FBF /* VendingItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0245FF4226A1B1E00237FBF /* VendingItems.storyboard */; };
+		A0245FFA226A1BFB00237FBF /* VendingMachineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0245FF9226A1BFB00237FBF /* VendingMachineCollectionViewController.swift */; };
+		A0245FFC226A1C8000237FBF /* VendingMachineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */; };
+		A0849D3A22736A9C001B7843 /* OrderConfermationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0849D3922736A9C001B7843 /* OrderConfermationViewController.swift */; };
 		A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */; };
 		F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
-		F508EE512242946E0033DAAD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE502242946E0033DAAD /* IntroViewController.swift */; };
-		F508EE56224294730033DAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F508EE55224294730033DAAD /* Assets.xcassets */; };
+		F508EE56224294730033DAAD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE57224294730033DAAD /* LaunchScreen.storyboard */; };
 		F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F509A2CB2253BE22004FE37E /* Main.storyboard */; };
 		F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */; };
 		F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */; };
 		F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532D65E224D202A0091C320 /* SnackiiImages.swift */; };
+		F59A7A89227895F80028898C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A85227895F80028898C /* Person.swift */; };
+		F59A7A8A227895F80028898C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59A7A86227895F80028898C /* Login.storyboard */; };
+		F59A7A8B227895F80028898C /* FirebaseSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A87227895F80028898C /* FirebaseSetup.swift */; };
+		F59A7A8C227895F80028898C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A88227895F80028898C /* IntroViewController.swift */; };
+		F59A7A8E227896040028898C /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A8D227896040028898C /* Snack.swift */; };
+		F59A7A90227898460028898C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A8F227898460028898C /* SettingViewController.swift */; };
+		F59DB99C2273574B00B0DEB3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31DBF9315220358375ADF4EE /* Pods-Snackii.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.release.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.release.xcconfig"; sourceTree = "<group>"; };
 		62B1E9612002590CE95183AE /* Pods_Snackii.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snackii.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6434522E796DDC8EAE86FEA4 /* Pods-Snackii.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.debug.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.debug.xcconfig"; sourceTree = "<group>"; };
-		A0245FEC2264D22700237FBF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
-		A0622B60224BCDF400388CE5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		A0622B62224BCE0C00388CE5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		A0E73DFB2253A805003ED4A0 /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
+		A0245FF4226A1B1E00237FBF /* VendingItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VendingItems.storyboard; sourceTree = "<group>"; };
+		A0245FF9226A1BFB00237FBF /* VendingMachineCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineCollectionViewController.swift; sourceTree = "<group>"; };
+		A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineCollectionViewCell.swift; sourceTree = "<group>"; };
+		A0849D3922736A9C001B7843 /* OrderConfermationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfermationViewController.swift; sourceTree = "<group>"; };
 		A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSetup.swift; sourceTree = "<group>"; };
 		F508EE4B2242946E0033DAAD /* Snackii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snackii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F508EE4E2242946E0033DAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F508EE502242946E0033DAAD /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		F508EE55224294730033DAAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F508EE58224294730033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F508EE5A224294730033DAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F509A2CC2253BE22004FE37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVendingItemsViewController.swift; sourceTree = "<group>"; };
 		F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F532D65E224D202A0091C320 /* SnackiiImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackiiImages.swift; sourceTree = "<group>"; };
+		F59A7A85227895F80028898C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F59A7A86227895F80028898C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F59A7A87227895F80028898C /* FirebaseSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseSetup.swift; sourceTree = "<group>"; };
+		F59A7A88227895F80028898C /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		F59A7A8D227896040028898C /* Snack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
+		F59A7A8F227898460028898C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +83,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A0245FF6226A1B7800237FBF /* RelevantVendingItems  */ = {
+			isa = PBXGroup;
+			children = (
+				F59A7A8D227896040028898C /* Snack.swift */,
+				A0245FF4226A1B1E00237FBF /* VendingItems.storyboard */,
+				A0245FF9226A1BFB00237FBF /* VendingMachineCollectionViewController.swift */,
+				A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */,
+				A0849D3922736A9C001B7843 /* OrderConfermationViewController.swift */,
+			);
+			path = "RelevantVendingItems ";
+			sourceTree = "<group>";
+		};
+		A0245FF7226A1BAA00237FBF /* LogIn Features */ = {
+			isa = PBXGroup;
+			children = (
+				F59A7A86227895F80028898C /* Login.storyboard */,
+				F59A7A87227895F80028898C /* FirebaseSetup.swift */,
+				F59A7A88227895F80028898C /* IntroViewController.swift */,
+				F59A7A85227895F80028898C /* Person.swift */,
+			);
+			path = "LogIn Features";
+			sourceTree = "<group>";
+		};
 		F508EE422242946E0033DAAD = {
 			isa = PBXGroup;
 			children = (
 				F508EE4D2242946E0033DAAD /* Snackii */,
+				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
+				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
+				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
+				F508EE5A224294730033DAAD /* Info.plist */,
 				F508EE4C2242946E0033DAAD /* Products */,
 				06DD047D91ACDFBBE7FDCD22 /* Pods */,
 				5316E2B5E5B3A504A83258ED /* Frameworks */,
@@ -95,19 +131,9 @@
 		F508EE4D2242946E0033DAAD /* Snackii */ = {
 			isa = PBXGroup;
 			children = (
-				F509A2CB2253BE22004FE37E /* Main.storyboard */,
-				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
-				F508EE502242946E0033DAAD /* IntroViewController.swift */,
-				F508EE55224294730033DAAD /* Assets.xcassets */,
-				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
-				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
-				F508EE5A224294730033DAAD /* Info.plist */,
+				A0245FF7226A1BAA00237FBF /* LogIn Features */,
+				A0245FF6226A1B7800237FBF /* RelevantVendingItems  */,
 				F532D65B224D05B40091C320 /* CollectionImageCellSnackii */,
-				A0622B60224BCDF400388CE5 /* Login.storyboard */,
-				A0622B62224BCE0C00388CE5 /* Person.swift */,
-				A0E73DFB2253A805003ED4A0 /* Snack.swift */,
-				A0EE504E225CEB4F00F9FAB2 /* FirebaseSetup.swift */,
-				A0245FEC2264D22700237FBF /* SignInController.swift */,
 			);
 			path = Snackii;
 			sourceTree = "<group>";
@@ -115,9 +141,11 @@
 		F532D65B224D05B40091C320 /* CollectionImageCellSnackii */ = {
 			isa = PBXGroup;
 			children = (
+				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
 				F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */,
 				F532D65E224D202A0091C320 /* SnackiiImages.swift */,
+				F59A7A8F227898460028898C /* SettingViewController.swift */,
 			);
 			path = CollectionImageCellSnackii;
 			sourceTree = "<group>";
@@ -185,8 +213,9 @@
 			files = (
 				F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */,
 				F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */,
-				F508EE56224294730033DAAD /* Assets.xcassets in Resources */,
-				A0622B61224BCDF400388CE5 /* Login.storyboard in Resources */,
+				F59A7A8A227895F80028898C /* Login.storyboard in Resources */,
+				F508EE56224294730033DAAD /* (null) in Resources */,
+				A0245FF5226A1B1E00237FBF /* VendingItems.storyboard in Resources */,
 				A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,15 +340,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F59A7A8C227895F80028898C /* IntroViewController.swift in Sources */,
+				A0245FFA226A1BFB00237FBF /* VendingMachineCollectionViewController.swift in Sources */,
+				F59DB99C2273574B00B0DEB3 /* (null) in Sources */,
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
-				A0245FED2264D22700237FBF /* SignInController.swift in Sources */,
+				F59A7A90227898460028898C /* SettingViewController.swift in Sources */,
 				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
+				F59A7A8E227896040028898C /* Snack.swift in Sources */,
 				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
+				A0849D3A22736A9C001B7843 /* OrderConfermationViewController.swift in Sources */,
 				F532D658224BC63B0091C320 /* ImageVendingItemsViewController.swift in Sources */,
-				A0E73DFC2253A805003ED4A0 /* Snack.swift in Sources */,
-				F508EE512242946E0033DAAD /* IntroViewController.swift in Sources */,
+				A0245FFC226A1C8000237FBF /* VendingMachineCollectionViewCell.swift in Sources */,
+				F59A7A89227895F80028898C /* Person.swift in Sources */,
+				F59A7A8B227895F80028898C /* FirebaseSetup.swift in Sources */,
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
-				A0622B63224BCE0C00388CE5 /* Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Snackii/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Snackii/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

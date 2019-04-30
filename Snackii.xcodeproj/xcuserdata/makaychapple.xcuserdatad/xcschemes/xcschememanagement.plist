@@ -7,7 +7,11 @@
 		<key>Snackii.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
+			<integer>36</integer>
+=======
 			<integer>16</integer>
+>>>>>>> d8f1ae51e5cb27cff2aa075b1c2128f8b25bade7
 		</dict>
 	</dict>
 </dict>
