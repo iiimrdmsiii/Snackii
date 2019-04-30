@@ -14,7 +14,5 @@ import FirebaseAuth
 
 
 class SignInController {
-    let signIn = Auth.auth().createUser(withEmail: Person.email, password: Person.password) { (AuthDataResult?, Error?, in
-    
-    })
+
 }

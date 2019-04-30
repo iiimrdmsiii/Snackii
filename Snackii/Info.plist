@@ -36,11 +36,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>Login</string>
 	<key>UIMainStoryboardFile</key>
-<<<<<<< HEAD
-	<string>VendingItems</string>
-=======
 	<string>Login</string>
->>>>>>> d8f1ae51e5cb27cff2aa075b1c2128f8b25bade7
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
