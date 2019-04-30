@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D2D86B5B04482F4454C08E2 /* Pods_Snackii.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B1E9612002590CE95183AE /* Pods_Snackii.framework */; };
-		A0245FED2264D22700237FBF /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0245FEC2264D22700237FBF /* SignInController.swift */; };
 		A0245FF5226A1B1E00237FBF /* VendingItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0245FF4226A1B1E00237FBF /* VendingItems.storyboard */; };
 		A0245FFA226A1BFB00237FBF /* VendingMachineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0245FF9226A1BFB00237FBF /* VendingMachineCollectionViewController.swift */; };
 		A0245FFC226A1C8000237FBF /* VendingMachineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */; };
@@ -36,7 +35,6 @@
 		31DBF9315220358375ADF4EE /* Pods-Snackii.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.release.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.release.xcconfig"; sourceTree = "<group>"; };
 		62B1E9612002590CE95183AE /* Pods_Snackii.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snackii.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6434522E796DDC8EAE86FEA4 /* Pods-Snackii.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snackii.debug.xcconfig"; path = "Target Support Files/Pods-Snackii/Pods-Snackii.debug.xcconfig"; sourceTree = "<group>"; };
-		A0245FEC2264D22700237FBF /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		A0245FF4226A1B1E00237FBF /* VendingItems.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VendingItems.storyboard; sourceTree = "<group>"; };
 		A0245FF9226A1BFB00237FBF /* VendingMachineCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineCollectionViewController.swift; sourceTree = "<group>"; };
 		A0245FFB226A1C8000237FBF /* VendingMachineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				F508EE4D2242946E0033DAAD /* Snackii */,
+				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
+				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
+				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
+				F508EE5A224294730033DAAD /* Info.plist */,
 				F508EE4C2242946E0033DAAD /* Products */,
 				06DD047D91ACDFBBE7FDCD22 /* Pods */,
 				5316E2B5E5B3A504A83258ED /* Frameworks */,
@@ -137,13 +139,7 @@
 			children = (
 				A0245FF7226A1BAA00237FBF /* LogIn Features */,
 				A0245FF6226A1B7800237FBF /* RelevantVendingItems  */,
-				F509A2CB2253BE22004FE37E /* Main.storyboard */,
-				F508EE4E2242946E0033DAAD /* AppDelegate.swift */,
-				F508EE57224294730033DAAD /* LaunchScreen.storyboard */,
-				A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */,
-				F508EE5A224294730033DAAD /* Info.plist */,
 				F532D65B224D05B40091C320 /* CollectionImageCellSnackii */,
-				A0245FEC2264D22700237FBF /* SignInController.swift */,
 			);
 			path = Snackii;
 			sourceTree = "<group>";
@@ -151,6 +147,7 @@
 		F532D65B224D05B40091C320 /* CollectionImageCellSnackii */ = {
 			isa = PBXGroup;
 			children = (
+				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
 				F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */,
 				F532D65E224D202A0091C320 /* SnackiiImages.swift */,
@@ -353,7 +350,6 @@
 				A0245FFA226A1BFB00237FBF /* VendingMachineCollectionViewController.swift in Sources */,
 				F59DB99C2273574B00B0DEB3 /* (null) in Sources */,
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
-				A0245FED2264D22700237FBF /* SignInController.swift in Sources */,
 				F59A7A90227898460028898C /* SettingViewController.swift in Sources */,
 				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
 				F59A7A8E227896040028898C /* Snack.swift in Sources */,
@@ -513,7 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Snackii/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,7 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Snackii/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
