@@ -15,18 +15,20 @@ import FirebaseFirestore
 
 class IntroViewController: UIViewController {
     @IBAction func LoginButtonTapped(_ sender: Any) {
-        // 1 getting authViewcontroller from FUIAuth.defaultAuthUI and storing it in authViewController
+ /*       // 1 getting authViewcontroller from FUIAuth.defaultAuthUI and storing it in authViewController
         if let authViewController = FUIAuth.defaultAuthUI()?.authViewController() {
             
             // 2 shows the authViewController to user
             show(authViewController, sender: sender)
         }
+         */
+        
+        performSegue(withIdentifier: "GoHome", sender: self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
-    
+        override func viewDidLoad() {
+            super.viewDidLoad()
+        }
 }
 
