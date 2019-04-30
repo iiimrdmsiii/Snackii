@@ -2,30 +2,41 @@
 //  SettingViewController.swift
 //  Snackii
 //
-//  Created by Dallin Smuin on 4/30/19.
+//  Created by Dallin Smuin on 4/22/19.
 //  Copyright © 2019 Dallin Smuin. All rights reserved.
 //
 
 import UIKit
 
 class SettingViewController: UIViewController {
+    
+    //*********************************************************
+    // MARK: - Properties
+    //*********************************************************
+    
     var addAndSaveImagesIsHidden: ImageVendingItemsViewController?
+    
+    
+    //*********************************************************
+    // MARK: - Outlets
+    //*********************************************************
+    
+    @IBOutlet weak var onOrOffSwitch: UISwitch!
+    
+    
+    //*********************************************************
+    // MARK: - Actions
+    //*********************************************************
+    
+    @IBAction func adminSwitch(_ sender: UISwitch) {
+        addAndSaveImagesIsHidden?.addImageButtonItem.isEnabled = onOrOffSwitch.isOn
+        addAndSaveImagesIsHidden?.saveImagesButtonItem.isEnabled = onOrOffSwitch.isOn
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        onOrOffSwitch.isOn = addAndSaveImagesIsHidden?.addImageButtonItem.isEnabled ?? false
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

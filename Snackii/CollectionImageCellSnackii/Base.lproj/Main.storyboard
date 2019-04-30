@@ -88,45 +88,6 @@
             </objects>
             <point key="canvasLocation" x="1785" y="209"/>
         </scene>
-        <!--Setting View Controller-->
-        <scene sceneID="X75-46-Sas">
-            <objects>
-                <viewController id="Ovn-NZ-4De" customClass="SettingViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6Nc-9s-mI9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activate Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-mY-skk">
-                                <rect key="frame" x="16" y="68" width="207.5" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ovq-Ch-l2l">
-                                <rect key="frame" x="308" y="72" width="51" height="31"/>
-                                <connections>
-                                    <action selector="adminSwitch:" destination="Ovn-NZ-4De" eventType="valueChanged" id="mgw-Fz-DPZ"/>
-                                </connections>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Ovq-Ch-l2l" firstAttribute="top" secondItem="FcB-GY-uFj" secondAttribute="top" constant="52" id="4hW-15-9jh"/>
-                            <constraint firstItem="FcB-GY-uFj" firstAttribute="trailing" secondItem="Ovq-Ch-l2l" secondAttribute="trailing" constant="18" id="BO9-xT-N0m"/>
-                            <constraint firstItem="4z3-mY-skk" firstAttribute="leading" secondItem="FcB-GY-uFj" secondAttribute="leading" constant="16" id="TG7-3z-Sso"/>
-                            <constraint firstItem="4z3-mY-skk" firstAttribute="top" secondItem="FcB-GY-uFj" secondAttribute="top" constant="48" id="mAo-JP-89I"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FcB-GY-uFj"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pA4-M8-Z9F"/>
-                    <connections>
-                        <outlet property="onOrOffSwitch" destination="Ovq-Ch-l2l" id="D51-0r-iff"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M7u-Jk-kQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1786" y="1104"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bfo-yT-eFJ">
             <objects>
@@ -143,7 +104,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tw-Ft-JSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512.79999999999995" y="209.14542728635683"/>
+            <point key="canvasLocation" x="860" y="208"/>
         </scene>
     </scenes>
 </document>
