@@ -8,8 +8,29 @@
 
 import UIKit
 
+protocol ImageCellsCollectionViewCellDelegate: class {
+    func nameTextFieldDidUpdate(text: String, cell: ImageCellsCollectionViewCell)
+}
+
 class ImageCellsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var snackiiImagesViews: UIImageView!
+    weak var delegate: ImageCellsCollectionViewCellDelegate?
     
+    @IBOutlet weak var snackiiImagesViews: UIImageView!
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    override func awakeFromNib() {
+        nameTextField.delegate = self
+    }
+}
+
+extension ImageCellsCollectionViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        delegate?.nameTextFieldDidUpdate(text: textField.text ?? "", cell: self)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        delegate?.nameTextFieldDidUpdate(text: textField.text ?? "", cell: self)
+        return true
+    }
 }

@@ -30,6 +30,6 @@ class VendingMachineCollectionViewCell: UICollectionViewCell {
     }
     
     func updateCell(snack: Snack) {
-        imageView.image = UIImage(named: snack.image)
+        imageView.image = UIImage(named: snack.imageID)
     }
 }

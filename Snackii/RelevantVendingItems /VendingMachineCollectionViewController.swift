@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class VendingMachineCollectionViewController: UICollectionViewController {
-    var snacks: [Snack] = [Drink(name: "Pepsi", image: "2000px-Pepsi_logo_2014.svg"), Food(name: "Lays", image: "250px-Mid_products_lays.svg")]
+    var snacks: [Snack] = [Snack(name: "Pepsi", imageID: "2000px-Pepsi_logo_2014.svg"), Snack(name: "Lays", imageID: "250px-Mid_products_lays.svg")]
 
     override func viewDidLoad() {
         super.viewDidLoad()

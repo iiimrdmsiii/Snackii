@@ -1,16 +1,15 @@
 //
-//  SettingViewController.swift
+//  SelectImagesViewController.swift
 //  Snackii
 //
-//  Created by Dallin Smuin on 4/30/19.
+//  Created by Dallin Smuin on 5/1/19.
 //  Copyright © 2019 Dallin Smuin. All rights reserved.
 //
 
 import UIKit
 
-class SettingViewController: UIViewController {
-    var addAndSaveImagesIsHidden: ImageVendingItemsViewController?
-    
+class SelectImagesViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
