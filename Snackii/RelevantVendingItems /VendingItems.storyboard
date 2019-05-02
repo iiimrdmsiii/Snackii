@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0w0-H9-CUp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,33 +19,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yjy-pI-DJu">
-                            <size key="itemSize" width="150" height="200"/>
+                            <size key="itemSize" width="160" height="160"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="Cell" id="gRg-QR-TL4" customClass="VendingMachineCollectionViewCell" customModule="Snackii" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                <rect key="frame" x="20" y="20" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcw-P4-nDC">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="150" id="cvK-62-kQZ"/>
-                                                <constraint firstAttribute="height" constant="200" id="wpj-IY-ezf"/>
-                                            </constraints>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcw-P4-nDC">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0O5-Tj-ane">
+                                            <rect key="frame" x="0.0" y="130" width="160" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="rcw-P4-nDC" firstAttribute="top" secondItem="gRg-QR-TL4" secondAttribute="top" id="OsA-yG-KpI"/>
-                                    <constraint firstAttribute="trailing" secondItem="rcw-P4-nDC" secondAttribute="trailing" id="SJ0-gM-06H"/>
-                                    <constraint firstItem="rcw-P4-nDC" firstAttribute="leading" secondItem="gRg-QR-TL4" secondAttribute="leading" id="qbq-C3-UCS"/>
+                                    <constraint firstItem="0O5-Tj-ane" firstAttribute="leading" secondItem="gRg-QR-TL4" secondAttribute="leading" id="WJm-ei-zfh"/>
+                                    <constraint firstAttribute="bottom" secondItem="0O5-Tj-ane" secondAttribute="bottom" id="xk8-tF-qjX"/>
+                                    <constraint firstAttribute="trailing" secondItem="0O5-Tj-ane" secondAttribute="trailing" id="y8p-uf-qrg"/>
                                 </constraints>
+                                <size key="customSize" width="160" height="160"/>
                                 <connections>
                                     <outlet property="imageView" destination="rcw-P4-nDC" id="jVV-jm-8NY"/>
                                 </connections>
@@ -120,57 +124,8 @@
             </objects>
             <point key="canvasLocation" x="1917.3913043478262" y="113.83928571428571"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="j5J-9D-5kP">
-            <objects>
-                <tableViewController id="aKF-fR-GRL" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pvc-h7-57B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e5p-Ss-kSF">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e5p-Ss-kSF" id="Jfn-9w-xuS">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="aKF-fR-GRL" id="5ck-My-EOc"/>
-                            <outlet property="delegate" destination="aKF-fR-GRL" id="Sdj-Cb-h92"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="icons8-maintenance-64" id="CAR-CX-XvP"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KC8-oH-LkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="829" y="841"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="gWp-Wx-hnw">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0w0-H9-CUp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qh5-FT-LcE">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="ynU-gJ-b6o" kind="relationship" relationship="viewControllers" id="oEE-pF-sXO"/>
-                        <segue destination="aKF-fR-GRL" kind="relationship" relationship="viewControllers" id="ejK-IG-kYW"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fR0-5V-R4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-81.159420289855078" y="109.82142857142857"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="icons8-maintenance-64" width="64" height="64"/>
         <image name="icons8-vending-machine-50" width="50" height="50"/>
     </resources>
 </document>

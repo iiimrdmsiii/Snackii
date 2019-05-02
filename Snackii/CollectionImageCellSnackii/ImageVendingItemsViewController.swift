@@ -141,6 +141,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.purple
 
         snackiiCollectionView.reloadData()
         
