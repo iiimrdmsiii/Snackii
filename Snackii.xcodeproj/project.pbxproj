@@ -28,7 +28,6 @@
 		F59A7A8C227895F80028898C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A88227895F80028898C /* IntroViewController.swift */; };
 		F59A7A8E227896040028898C /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A8D227896040028898C /* Snack.swift */; };
 		F59A7A922278AEE40028898C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F59A7A912278AEE30028898C /* Images.xcassets */; };
-		F59A7A962279E07D0028898C /* SelectImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A952279E07D0028898C /* SelectImagesViewController.swift */; };
 		F59DB99C2273574B00B0DEB3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		F59A7A88227895F80028898C /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		F59A7A8D227896040028898C /* Snack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 		F59A7A912278AEE30028898C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F59A7A952279E07D0028898C /* SelectImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +150,6 @@
 			children = (
 				F509A2CB2253BE22004FE37E /* Main.storyboard */,
 				F532D657224BC63B0091C320 /* ImageVendingItemsViewController.swift */,
-				F59A7A952279E07D0028898C /* SelectImagesViewController.swift */,
 				F532D65C224D06280091C320 /* ImageCellsCollectionViewCell.swift */,
 				F532D65E224D202A0091C320 /* SnackiiImages.swift */,
 			);
@@ -350,7 +347,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F59A7A962279E07D0028898C /* SelectImagesViewController.swift in Sources */,
 				F59A7A8C227895F80028898C /* IntroViewController.swift in Sources */,
 				A0245FFA226A1BFB00237FBF /* VendingMachineCollectionViewController.swift in Sources */,
 				F59DB99C2273574B00B0DEB3 /* (null) in Sources */,
