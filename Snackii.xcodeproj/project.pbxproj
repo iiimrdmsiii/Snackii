@@ -25,7 +25,6 @@
 		F59A7A89227895F80028898C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A85227895F80028898C /* Person.swift */; };
 		F59A7A8A227895F80028898C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59A7A86227895F80028898C /* Login.storyboard */; };
 		F59A7A8B227895F80028898C /* FirebaseSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A87227895F80028898C /* FirebaseSetup.swift */; };
-		F59A7A8C227895F80028898C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A88227895F80028898C /* IntroViewController.swift */; };
 		F59A7A8E227896040028898C /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A8D227896040028898C /* Snack.swift */; };
 		F59A7A90227898460028898C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A7A8F227898460028898C /* SettingViewController.swift */; };
 		F59DB99C2273574B00B0DEB3 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -53,7 +52,6 @@
 		F59A7A85227895F80028898C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F59A7A86227895F80028898C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F59A7A87227895F80028898C /* FirebaseSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseSetup.swift; sourceTree = "<group>"; };
-		F59A7A88227895F80028898C /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		F59A7A8D227896040028898C /* Snack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 		F59A7A8F227898460028898C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				F59A7A87227895F80028898C /* FirebaseSetup.swift */,
-				F59A7A88227895F80028898C /* IntroViewController.swift */,
 				F59A7A86227895F80028898C /* Login.storyboard */,
 				F59A7A85227895F80028898C /* Person.swift */,
 				BC0EF0A22278A3A40053C986 /* SignUpViewController.swift */,
@@ -346,7 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F59A7A8C227895F80028898C /* IntroViewController.swift in Sources */,
 				A0245FFA226A1BFB00237FBF /* VendingMachineCollectionViewController.swift in Sources */,
 				F59DB99C2273574B00B0DEB3 /* (null) in Sources */,
 				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,

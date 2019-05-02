@@ -36,7 +36,9 @@ class FirebaseSetup: NSObject {
 extension FirebaseSetup: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         // print results and segue into vending controller
-        print(authDataResult)
+        if let resultAuthData = authDataResult {
+            print("\(resultAuthData)")
+        }
         if authDataResult != nil {
             let nextStoryBoard = UIStoryboard(name: "VendingSnacks", bundle: nil)
             let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "Vending") 
