@@ -10,21 +10,14 @@ import Foundation
 import FirebaseFirestore
 import FirebaseDatabase
 
-protocol Snack {
-    var name: String { get }
-    var image: String { get }
+struct Snack {
+    var name: String
+    var imageID: String
+    var image: UIImage?
+    
+    init(name: String, imageID: String, image: UIImage? = nil) {
+        self.name = name
+        self.imageID = imageID
+        self.image = image
+    }
 }
-
-struct Drink: Snack {
-    let name: String
-    let image: String
-}
-
-struct Food: Snack {
-    let name: String
-    let image: String
-}
-
-
-
-
