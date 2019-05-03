@@ -11,7 +11,6 @@ import UIKit
 class SignUpViewController: UIViewController {
 
     static let SignInPath = SignUpViewController()
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
