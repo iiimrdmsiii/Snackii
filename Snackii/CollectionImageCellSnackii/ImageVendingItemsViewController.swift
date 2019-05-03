@@ -197,7 +197,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             completion(error == nil)
             
             // able to go to next UIview.
-//            self.performSegue(withIdentifier: "", sender: self)
+            self.performSegue(withIdentifier: "saveSnacks", sender: self)
         }
     }
     
@@ -242,7 +242,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
 
         let downloadURL = snacks[indexPath.row]
         
-        //        guard let uid = Auth.auth().currentUser?.uid else {return}
+//        guard let uid = Auth.auth().currentUser?.uid else {return}
         let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
         let storageDelete = storageRef.child("snack/\(uid)/")
@@ -288,6 +288,56 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         return cell
     }
+    
+    func handleSave() {
+        
+        guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
+        
+        // Upload the profile image to Firebase Storage
+        self.uploadFirebaseImages(image) { url in
+            
+            if let url = url {
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                
+                changeRequest?.photoURL = url
+                
+                // write ther string of the image
+                self.firebaseWrite(url: url.absoluteString)
+                
+                changeRequest?.commitChanges { error in
+                    if error == nil {
+                        print("image Display change")
+                        
+                        // save the image data to firebase database
+                        self.saveImageToFirebase(snackName: "", snackiiImagesURL: url ){ success in
+                            if success {
+                                self.dismiss(animated: true, completion: nil)
+                            } else {
+                                self.restForm()
+                            }
+                        }
+                    } else {
+                        print("Error: \(error!.localizedDescription)")
+                        self.restForm()
+                    }
+                }
+                
+                
+            } else {
+                self.restForm()
+            }
+        }
+        
+    }
+    
+    // catches the error to alert you for signing up.
+    func restForm() {
+        
+        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 }
 
 extension ImageVendingItemsViewController: ImageCellsCollectionViewCellDelegate {
@@ -301,50 +351,12 @@ extension ImageVendingItemsViewController: ImageCellsCollectionViewCellDelegate 
 }
 
 
+
 //*********************************************************
 // MARK: - Others
 //*********************************************************
 
-//    @objc func handleSave() {
-//
-//        guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
-//
-//        // Upload the profile image to Firebase Storage
-//        self.uploadFirebaseImages(image) { url in
-//
-//            if let url = url {
-//                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-//
-//                changeRequest?.photoURL = url
-//
-//                // write ther string of the image
-//                self.firebaseWrite(url: url.absoluteString)
-//
-//                changeRequest?.commitChanges { error in
-//                    if error == nil {
-//                        print("image Display change")
-//
-//                        // save the image data to firebase database
-//                        self.saveImageToFirebase(snackiiImagesURL: url) { success in
-//                            if success {
-//                                self.dismiss(animated: true, completion: nil)
-//                            } else {
-//                                self.restForm()
-//                            }
-//                        }
-//                    } else {
-//                        print("Error: \(error!.localizedDescription)")
-//                        self.restForm()
-//                    }
-//                }
-//
-//
-//            } else {
-//                self.restForm()
-//            }
-//        }
-//
-//    }
+
 
 //    func getArrayOfImagesToFirebaseStorage(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
 //
