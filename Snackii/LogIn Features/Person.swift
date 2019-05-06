@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct Person: Equatable {
+struct Person {
     let name: String
     let email: String
     let password: String
     var admin = false
+    var arrayOfSnacks: [Snack]
 }
 

@@ -80,7 +80,6 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="save" id="OZk-uB-01I">
                             <connections>
                                 <action selector="saveImagesButtonItemTapped:" destination="tYM-un-ws9" id="Ak0-xN-7Uj"/>
-                                <segue destination="fJW-FG-wAo" kind="show" identifier="saveSnacks" id="OSp-I5-CM5"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IeC-NX-gt9">

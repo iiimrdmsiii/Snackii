@@ -17,6 +17,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // MARK: - Properties
     //*********************************************************
     
+    let dispatchGroup = DispatchGroup()
+    
     var docRef: DocumentReference!
     
     var db: Firestore!
@@ -150,7 +152,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         docRef = db.document("snacks/uid/")
 
-
     }
     
     // Upload the image to Firebase
@@ -197,7 +198,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             completion(error == nil)
             
             // able to go to next UIview.
-            self.performSegue(withIdentifier: "saveSnacks", sender: self)
+//            self.performSegue(withIdentifier: "saveSnacks", sender: self)
         }
     }
     
@@ -207,7 +208,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         var ref: DocumentReference? = nil
         ref = db.collection("snacks").addDocument(data: [
             "imageURL": url
-            
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -289,6 +289,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         return cell
     }
     
+    
+    // this doesnt interact with anything right now.
     func handleSave() {
         
         guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
@@ -340,53 +342,13 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     }
 }
 
+// helps write and print it on the iphone screen.
 extension ImageVendingItemsViewController: ImageCellsCollectionViewCellDelegate {
     func nameTextFieldDidUpdate(text: String, cell: ImageCellsCollectionViewCell) {
+        
         // to update the snack the array you need to know the index of the item that you're editing.
         // you also need to know the name of the snack (what the user typed in)
-        
         guard let index = snackiiCollectionView.indexPath(for: cell) else { return }
         snacks[index.row].name = text
     }
 }
-
-
-
-//*********************************************************
-// MARK: - Others
-//*********************************************************
-
-
-
-//    func getArrayOfImagesToFirebaseStorage(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
-//
-//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
-//
-//        //Create a reference to the image
-//        let imageRef = Storage.storage().reference().child("snack/\(uid)")
-//
-//        // Get image data
-//        if let uploadData = image.pngData() {
-//
-//            // Upload image to Firebase Cloud Storage
-//            imageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-//                guard error == nil else {
-//                    // Handle error
-//                    return
-//                }
-//                // Get full image url
-//                imageRef.downloadURL { (url, error) in
-//                    guard let downloadURL = url else {
-//                        // Handle error
-//                        return
-//                    }
-//
-//                    // Save url to database
-//                    Firestore.firestore().collection("snacks").document("").setData(["imageURL" : downloadURL.absoluteString])
-//                }
-//            }
-//        }
-//    }
-
-
-
