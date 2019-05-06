@@ -100,7 +100,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             present(alertImage, animated: true, completion: nil)
             
         } else {
-            
+        
             // runs the image to save up to firebase.
             // upload image to fb
             for snack in snacks {
@@ -109,6 +109,9 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
                         guard let url = url else { return }
                         self.saveImageToFirebase(snackName: snack.name, snackiiImagesURL: url, completion: { success in
                             self.firebaseWrite(url: url.absoluteString)
+                            
+                            // able to go to next UIview.
+                            self.performSegue(withIdentifier: "saveSnackImages", sender: self)
                         })
                     }
                 }
@@ -196,9 +199,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         databaseRef.setData(userObjectImages) { (error) in
             completion(error == nil)
-            
-            // able to go to next UIview.
-//            self.performSegue(withIdentifier: "saveSnacks", sender: self)
         }
     }
     

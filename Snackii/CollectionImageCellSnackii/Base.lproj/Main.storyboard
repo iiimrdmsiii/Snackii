@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F4d-BZ-xkG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -92,6 +92,7 @@
                         <outlet property="addImageButtonItem" destination="IeC-NX-gt9" id="e7S-WJ-S0Q"/>
                         <outlet property="saveImagesButtonItem" destination="OZk-uB-01I" id="KiU-Ur-nNU"/>
                         <outlet property="snackiiCollectionView" destination="NJg-QL-uir" id="Dj3-D9-arD"/>
+                        <segue destination="fJW-FG-wAo" kind="show" identifier="saveSnackImages" id="evB-WU-ej4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6XS-gN-v66" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +105,7 @@
                 <viewControllerPlaceholder storyboardName="VendingItems" referencedIdentifier="Vending" id="fJW-FG-wAo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcu-ks-I32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2838" y="214"/>
+            <point key="canvasLocation" x="2749" y="208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bfo-yT-eFJ">
