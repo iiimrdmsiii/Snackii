@@ -15,6 +15,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var reenterTextField: UITextField!
+    @IBOutlet weak var adminSwitch: UISwitch!
     var displayName = ""
     var email = ""
     var password = ""
@@ -54,9 +55,18 @@ class SignUpViewController: UIViewController {
             self.password = passwordText
         }
     }
-    
+
     func checkEverythingWasChanged(displayName: String, email: String, password: String) {
+        var adminRights: Bool
+        if adminSwitch.isEnabled {
+            adminRights = true
+        } else {
+            adminRights = false
+        }
+        
         if displayName != "" && email != "" && password != "" {
+            var man = Person.init(name: displayName, email: email, password: password, admin: adminRights)
+            print(man)
             performSegue(withIdentifier: "DataIsFilled", sender: self)
         } else {
             self.displayName = ""

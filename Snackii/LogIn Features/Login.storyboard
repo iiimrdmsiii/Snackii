@@ -195,6 +195,7 @@
                         <viewLayoutGuide key="safeArea" id="GGR-jL-jZD"/>
                     </view>
                     <connections>
+                        <outlet property="adminSwitch" destination="Rch-JS-iIi" id="q6J-qL-Smc"/>
                         <outlet property="emailTextField" destination="8Ee-Qc-qHj" id="dbV-AV-n0k"/>
                         <outlet property="nameTextField" destination="7kr-rt-Z1E" id="SS3-Pq-SzB"/>
                         <outlet property="passwordTextField" destination="0Ps-LY-WkJ" id="y3N-GI-vlT"/>
