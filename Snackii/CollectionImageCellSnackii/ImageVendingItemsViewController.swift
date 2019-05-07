@@ -160,8 +160,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // Upload the image to Firebase
     func uploadFirebaseImages(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
         
-//        guard let uid = Auth.auth().currentUser?.uid else {return}
-        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
         let storageRef = Storage.storage().reference().child("snack/\(uid)/\(UUID().uuidString)")
         
@@ -189,8 +189,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // Save the images to firebase
     func saveImageToFirebase(snackName: String, snackiiImagesURL: URL, completion: @escaping((_ success: Bool) -> ())) {
         print("SaveImageToFirebase has been saved!!!!!")
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Firestore.firestore().document("snacks/bob")
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Firestore.firestore().document("snacks/\(uid)")
         
         let userObjectImages = [
             "imageURL": snackiiImagesURL.absoluteString,
@@ -240,10 +240,10 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         let storage = Storage.storage()
         let storageRef = storage.reference()
 
-        let downloadURL = snacks[indexPath.row]
+//        let downloadURL = snacks[indexPath.row]
         
-//        guard let uid = Auth.auth().currentUser?.uid else {return}
-        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
         let storageDelete = storageRef.child("snack/\(uid)/")
         
@@ -291,55 +291,55 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     
     
     // this doesnt interact with anything right now.
-    func handleSave() {
-        
-        guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
-        
-        // Upload the profile image to Firebase Storage
-        self.uploadFirebaseImages(image) { url in
-            
-            if let url = url {
-                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                
-                changeRequest?.photoURL = url
-                
-                // write ther string of the image
-                self.firebaseWrite(url: url.absoluteString)
-                
-                changeRequest?.commitChanges { error in
-                    if error == nil {
-                        print("image Display change")
-                        
-                        // save the image data to firebase database
-                        self.saveImageToFirebase(snackName: "", snackiiImagesURL: url ){ success in
-                            if success {
-                                self.dismiss(animated: true, completion: nil)
-                            } else {
-                                self.restForm()
-                            }
-                        }
-                    } else {
-                        print("Error: \(error!.localizedDescription)")
-                        self.restForm()
-                    }
-                }
-                
-                
-            } else {
-                self.restForm()
-            }
-        }
-        
-    }
-    
-    // catches the error to alert you for signing up.
-    func restForm() {
-        
-        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        
-    }
+//    func handleSave() {
+//
+//        guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
+//
+//        // Upload the profile image to Firebase Storage
+//        self.uploadFirebaseImages(image) { url in
+//
+//            if let url = url {
+//                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+//
+//                changeRequest?.photoURL = url
+//
+//                // write ther string of the image
+//                self.firebaseWrite(url: url.absoluteString)
+//
+//                changeRequest?.commitChanges { error in
+//                    if error == nil {
+//                        print("image Display change")
+//
+//                        // save the image data to firebase database
+//                        self.saveImageToFirebase(snackName: "", snackiiImagesURL: url ){ success in
+//                            if success {
+//                                self.dismiss(animated: true, completion: nil)
+//                            } else {
+//                                self.restForm()
+//                            }
+//                        }
+//                    } else {
+//                        print("Error: \(error!.localizedDescription)")
+//                        self.restForm()
+//                    }
+//                }
+//
+//
+//            } else {
+//                self.restForm()
+//            }
+//        }
+//
+//    }
+//
+//    // catches the error to alert you for signing up.
+//    func restForm() {
+//
+//        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
+//
+//    }
 }
 
 // helps write and print it on the iphone screen.
