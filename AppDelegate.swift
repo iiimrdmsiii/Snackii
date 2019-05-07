@@ -56,9 +56,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //return firebaseSetup.handleOpenURL(url: url, options: options)
     //}
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        // Called when another application tries to open our application
-        return firebaseSetup.handleOpenURL(url: url, options: options)
-    }
 
 }
