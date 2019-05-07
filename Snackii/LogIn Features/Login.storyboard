@@ -165,11 +165,15 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButtonPressed:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="vxG-yY-xBm"/>
+                                    <action selector="createAccountTapped:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="xip-vW-PN6"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-JS-iIi">
                                 <rect key="frame" x="240" y="425.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="adminIsTrueSwitchTapped:" destination="XKz-Yj-uUD" eventType="valueChanged" id="CAr-0s-8y5"/>
+                                    <action selector="adminSwitchTapped:" destination="XKz-Yj-uUD" eventType="valueChanged" id="vhc-OH-87M"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

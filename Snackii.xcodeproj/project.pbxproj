@@ -15,7 +15,7 @@
 		A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */; };
 		BC0EF0A32278A3A40053C986 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0EF0A22278A3A40053C986 /* SignUpViewController.swift */; };
 		BC0EF0A52278A6A00053C986 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0EF0A42278A6A00053C986 /* LoginViewController.swift */; };
-		F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
+		CB2DA0BA22812250000F40F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
 		F508EE56224294730033DAAD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE57224294730033DAAD /* LaunchScreen.storyboard */; };
 		F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F509A2CB2253BE22004FE37E /* Main.storyboard */; };
@@ -183,7 +183,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Dallin Smuin";
 				TargetAttributes = {
 					F508EE4A2242946E0033DAAD = {
@@ -351,7 +351,7 @@
 			files = (
 				A0245FFA226A1BFB00237FBF /* VendingMachineCollectionViewController.swift in Sources */,
 				F59DB99C2273574B00B0DEB3 /* (null) in Sources */,
-				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
+				CB2DA0BA22812250000F40F8 /* AppDelegate.swift in Sources */,
 				F532D65D224D06280091C320 /* ImageCellsCollectionViewCell.swift in Sources */,
 				F59A7A8E227896040028898C /* Snack.swift in Sources */,
 				F532D65F224D202A0091C320 /* SnackiiImages.swift in Sources */,
@@ -362,7 +362,6 @@
 				BC0EF0A52278A6A00053C986 /* LoginViewController.swift in Sources */,
 				F59A7A89227895F80028898C /* Person.swift in Sources */,
 				F59A7A8B227895F80028898C /* FirebaseSetup.swift in Sources */,
-				F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
