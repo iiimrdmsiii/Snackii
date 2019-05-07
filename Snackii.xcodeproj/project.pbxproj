@@ -15,6 +15,7 @@
 		A0E73DFE2253AEDB003ED4A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */; };
 		BC0EF0A32278A3A40053C986 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0EF0A22278A3A40053C986 /* SignUpViewController.swift */; };
 		BC0EF0A52278A6A00053C986 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0EF0A42278A6A00053C986 /* LoginViewController.swift */; };
+		BCCF3004227C94A600814D77 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCF3003227C94A600814D77 /* Messaging.storyboard */; };
 		F508EE4F2242946E0033DAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508EE4E2242946E0033DAAD /* AppDelegate.swift */; };
 		F508EE56224294730033DAAD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508EE57224294730033DAAD /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 		A0E73DFD2253AEDB003ED4A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC0EF0A22278A3A40053C986 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BC0EF0A42278A6A00053C986 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCCF3003227C94A600814D77 /* Messaging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messaging.storyboard; sourceTree = "<group>"; };
 		F508EE4B2242946E0033DAAD /* Snackii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snackii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F508EE4E2242946E0033DAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F508EE58224294730033DAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 			path = "LogIn Features";
 			sourceTree = "<group>";
 		};
+		BCCF3002227C937700814D77 /* MessagingAndNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF3003227C94A600814D77 /* Messaging.storyboard */,
+			);
+			path = MessagingAndNotifications;
+			sourceTree = "<group>";
+		};
 		F508EE422242946E0033DAAD = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 		F508EE4D2242946E0033DAAD /* Snackii */ = {
 			isa = PBXGroup;
 			children = (
+				BCCF3002227C937700814D77 /* MessagingAndNotifications */,
 				A0245FF7226A1BAA00237FBF /* LogIn Features */,
 				A0245FF6226A1B7800237FBF /* RelevantVendingItems  */,
 				F532D65B224D05B40091C320 /* CollectionImageCellSnackii */,
@@ -220,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F508EE59224294730033DAAD /* LaunchScreen.storyboard in Resources */,
+				BCCF3004227C94A600814D77 /* Messaging.storyboard in Resources */,
 				F509A2CD2253BE22004FE37E /* Main.storyboard in Resources */,
 				F59A7A922278AEE40028898C /* Images.xcassets in Resources */,
 				F59A7A8A227895F80028898C /* Login.storyboard in Resources */,
