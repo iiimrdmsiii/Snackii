@@ -165,11 +165,15 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="createAccountTapped:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="Kar-Ta-W8G"/>
                                     <action selector="submitButtonPressed:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="vxG-yY-xBm"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-JS-iIi">
                                 <rect key="frame" x="240" y="425.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="adminSwitchTapped:" destination="XKz-Yj-uUD" eventType="valueChanged" id="4vC-Wa-vI2"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -195,6 +199,7 @@
                         <viewLayoutGuide key="safeArea" id="GGR-jL-jZD"/>
                     </view>
                     <connections>
+                        <outlet property="adminSwitch" destination="Rch-JS-iIi" id="swT-zu-nTy"/>
                         <outlet property="emailTextField" destination="8Ee-Qc-qHj" id="dbV-AV-n0k"/>
                         <outlet property="nameTextField" destination="7kr-rt-Z1E" id="SS3-Pq-SzB"/>
                         <outlet property="passwordTextField" destination="0Ps-LY-WkJ" id="y3N-GI-vlT"/>

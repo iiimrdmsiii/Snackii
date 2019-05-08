@@ -109,24 +109,11 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func logOutTapped(_ sender: Any) { //this isnt working correctly
-        self.currentAuthID = nil
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            print("User Signed Out")
-            print(currentAuthID ?? "No Current UID Detected")
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-    }
-    
     @IBAction func createAccountTapped(_ sender: Any) {
         
         createUser()
         createData()
         print(currentAuthID)
-        
     }
     
     @IBAction func adminSwitchTapped(_ sender: UISwitch) {
