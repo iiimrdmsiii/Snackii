@@ -65,8 +65,7 @@ class SignUpViewController: UIViewController {
         }
         
         if displayName != "" && email != "" && password != "" {
-            var man = Person.init(name: displayName, email: email, password: password, admin: adminRights)
-            print(man)
+            var man = Person.init(name: displayName, email: email, password: password, admin: adminRights, arrayOfSnacks: [])
             performSegue(withIdentifier: "DataIsFilled", sender: self)
         } else {
             self.displayName = ""

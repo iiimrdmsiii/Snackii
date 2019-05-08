@@ -25,6 +25,12 @@ class VendingMachineCollectionViewController: UICollectionViewController {
         
         self.collectionView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         
+        let ref = Database.database().reference()
+        
+        ref.child("login/aNM7ng4zeENV2EkWkRQkUtvZEOg1").observeSingleEvent(of: .value) { (snapshot) in
+            let data = snapshot.value as? [String: Any]
+            print("\(data)")
+        }
     }
 
     // MARK: UICollectionViewDataSource
