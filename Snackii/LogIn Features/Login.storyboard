@@ -165,8 +165,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="createAccountTapped:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="Kar-Ta-W8G"/>
-                                    <action selector="submitButtonPressed:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="vxG-yY-xBm"/>
+                                    <action selector="createAccountTapped:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="dtf-9W-BUR"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-JS-iIi">
