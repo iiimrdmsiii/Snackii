@@ -106,9 +106,12 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             for snack in snacks {
                 if let image = snack.image {
                     uploadFirebaseImages(image) { (url) in
-                        guard let url = url else { return }
+                        guard let url = url else {
+                            print("the url returned was nil")
+                            return
+                        }
                         self.saveImageToFirebase(snackName: snack.name, snackiiImagesURL: url, completion: { success in
-                            self.firebaseWrite(url: url.absoluteString)
+//                            self.firebaseWrite(url: url.absoluteString)
                             
                             // able to go to next UIview.
                             self.performSegue(withIdentifier: "saveSnackImages", sender: self)
@@ -160,13 +163,19 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // Upload the image to Firebase
     func uploadFirebaseImages(_ image: UIImage, completion: @escaping ((_ url: URL?) -> () )) {
         
-        guard let uid = Auth.auth().currentUser?.uid else {return}
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("uid could not be found")
+            return
+        }
 //        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
         let storageRef = Storage.storage().reference().child("snack/\(uid)/\(UUID().uuidString)")
         
         
-        guard let imageData = image.jpegData(compressionQuality: 0.25) else { return }
+        guard let imageData = image.jpegData(compressionQuality: 0.25) else {
+            print("image could not be compressed")
+            return
+        }
         
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpg"
@@ -181,6 +190,7 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
                 
             } else {
                 // Fail
+                print("there was an error putting the data to storage")
                 completion(nil)
             }
         }
@@ -190,42 +200,47 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     func saveImageToFirebase(snackName: String, snackiiImagesURL: URL, completion: @escaping((_ success: Bool) -> ())) {
         print("SaveImageToFirebase has been saved!!!!!")
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Firestore.firestore().document("snacks/\(uid)")
+        let databaseRef = Firestore.firestore().document("snacks/\(UUID().uuidString)")
         
         let userObjectImages = [
+            "uid": uid,
             "imageURL": snackiiImagesURL.absoluteString,
             "name": snackName
         ] as [String:String]
         
         databaseRef.setData(userObjectImages) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                print("There was an error setting data to database")
+            }
             completion(error == nil)
         }
     }
     
     // Add a new document with a generated ID
     // url String helps with creating a string for the image to have a place that the image can me saved.
-    private func firebaseWrite(url: String) {
-        var ref: DocumentReference? = nil
-        ref = db.collection("snacks").addDocument(data: [
-            "imageURL": url
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
-        
-        db.collection("snacks").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                }
-            }
-        }
-    }
+//    private func firebaseWrite(url: String) {
+//        var ref: DocumentReference? = nil
+//        ref = db.collection("snacks").addDocument(data: [
+//            "imageURL": url
+//        ]) { err in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                print("Document added with ID: \(ref!.documentID)")
+//            }
+//        }
+//
+//        db.collection("snacks").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                }
+//            }
+//        }
+//    }
     
     
     
