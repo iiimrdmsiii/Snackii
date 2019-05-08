@@ -17,15 +17,19 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        #if DEBUG
+        emailLoginTextField.text = "test3@test.com"
+        passwordLoginTextField.text = "password"
+        #endif
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         guard let email = emailLoginTextField.text else {return}
         guard let password = passwordLoginTextField.text else {return}
         
-        Auth.auth().signIn(withEmail: email, link: password) { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if user != nil {
-                self.performSegue(withIdentifier: "logIn", sender: self)
+                self.performSegue(withIdentifier: "Login", sender: self)
             } else {
                 let alert = UIAlertController(title: "Error Logging In", message: nil, preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
