@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     let userDefault = UserDefaults()
-    let firebaseSetup = FirebaseSetup()
    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -55,10 +54,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when another application tries to open our application
         //return firebaseSetup.handleOpenURL(url: url, options: options)
     //}
-
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        // Called when another application tries to open our application
-        return firebaseSetup.handleOpenURL(url: url, options: options)
-    }
 
 }
