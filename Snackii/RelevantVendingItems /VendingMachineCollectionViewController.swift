@@ -12,7 +12,6 @@ import Firebase
 private let reuseIdentifier = "Cell"
 
 class VendingMachineCollectionViewController: UICollectionViewController {
-    var snacks: [Snack] = [Snack(name: "Pepsi", imageID: "2000px-Pepsi_logo_2014.svg"), Snack(name: "Lays", imageID: "250px-Mid_products_lays.svg")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,8 @@ class VendingMachineCollectionViewController: UICollectionViewController {
         
         ref.child("login/aNM7ng4zeENV2EkWkRQkUtvZEOg1").observeSingleEvent(of: .value) { (snapshot) in
             let data = snapshot.value as? [String: Any]
-            print("\(data)")
+            let dataString = String(describing: data)
+            print("\(dataString) \(dataString) \(dataString) \(dataString) \(dataString) \(dataString) \(dataString) \(dataString) \(dataString) ")
         }
     }
 
@@ -41,25 +41,23 @@ class VendingMachineCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return snacks.count
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as!
         VendingMachineCollectionViewCell
+        //cell.updateCell(snack: _)
         
-        cell.updateCell(snack: snacks[indexPath.item])
-    
-        // Configure the cell
-    
         return cell
     }
 
     // MARK: UICollectionViewDelegate
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let snack = snacks[indexPath.item]
-        print(snack.name)
+        //let snack = snacks[indexPath.item]
+        //print(snack.name)
     }
 
 }
