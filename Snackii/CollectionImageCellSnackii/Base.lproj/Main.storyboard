@@ -99,13 +99,13 @@
             </objects>
             <point key="canvasLocation" x="1784.8" y="208.24587706146929"/>
         </scene>
-        <!--Vending-->
+        <!--VendingItems-->
         <scene sceneID="o5B-rQ-sac">
             <objects>
-                <viewControllerPlaceholder storyboardName="VendingItems" referencedIdentifier="Vending" id="fJW-FG-wAo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="VendingItems" id="fJW-FG-wAo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcu-ks-I32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2749" y="208"/>
+            <point key="canvasLocation" x="2584" y="208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bfo-yT-eFJ">
@@ -123,7 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tw-Ft-JSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512.79999999999995" y="209.14542728635683"/>
+            <point key="canvasLocation" x="913" y="208"/>
         </scene>
     </scenes>
 </document>
