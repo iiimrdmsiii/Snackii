@@ -19,10 +19,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var reenterTextField: UITextField!
     @IBOutlet var adminSwitch: UISwitch!
     
-    var displayName = ""
-    var email = ""
-    var password = ""
-    
     var db: Firestore!
     var userId: String = ""
     var emailField: String = ""
@@ -70,8 +66,7 @@ class SignUpViewController: UIViewController {
                 print("Not Valid")
                 print(error)
             } else {
-                self.performSegue(withIdentifier: "DataIsFilled", sender: nil)
-                print("UserID: \(self.currentAuthID ?? "your UID")")
+                print("User created")
             }
         }
     }
@@ -110,12 +105,20 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {
-        
+  
         createUser()
+        if currentAuthID != nil {
         createData()
+            performSegue(withIdentifier: "LogIn", sender: nil)
         print(currentAuthID)
-    }
+        } else {
+            return
+        }
     
+        self.performSegue(withIdentifier: "DataIsFilled", sender: nil)
+    
+}
+
     @IBAction func adminSwitchTapped(_ sender: UISwitch) {
         
         if (sender.isOn == true) {
