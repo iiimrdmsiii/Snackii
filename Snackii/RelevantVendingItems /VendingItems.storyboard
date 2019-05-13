@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tqf-zS-tgx">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Main-->
+        <scene sceneID="WtZ-lQ-cVa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="qna-AI-B1k" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjz-G1-nbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2319" y="573"/>
+        </scene>
+        <!--Vending Machine Collection View Controller-->
         <scene sceneID="SMX-hi-bgX">
             <objects>
                 <collectionViewController storyboardIdentifier="Vending" id="ynU-gJ-b6o" customClass="VendingMachineCollectionViewController" customModule="Snackii" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,11 +68,18 @@
                             <outlet property="delegate" destination="ynU-gJ-b6o" id="jqf-4u-ZQU"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="gGC-sC-ca8"/>
+                    <navigationItem key="navigationItem" id="DBq-IR-KMf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="MTw-JF-ayq">
+                            <connections>
+                                <segue destination="qna-AI-B1k" kind="show" id="X4z-mM-gWh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Q4j-3H-r2A"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhI-jF-nBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.98550724637687" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1739.1304347826087" y="109.82142857142857"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zan-kw-RrQ">
@@ -122,7 +137,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="010-q1-ckv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Pv7-dr-KFe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1917.3913043478262" y="113.83928571428571"/>
+            <point key="canvasLocation" x="2859" y="117"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2b6-ld-WaW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tqf-zS-tgx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="icons8-vending-machine-50" id="gGC-sC-ca8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sVw-nD-tSq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ynU-gJ-b6o" kind="relationship" relationship="rootViewController" id="C0a-Vh-Q5a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1N-3S-PcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-vending-machine-50" width="16" height="16"/>
+    </resources>
 </document>

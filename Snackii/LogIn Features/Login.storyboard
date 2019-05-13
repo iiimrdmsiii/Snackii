@@ -165,9 +165,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-
                                     <action selector="createAccountTapped:" destination="XKz-Yj-uUD" eventType="touchUpInside" id="dtf-9W-BUR"/>
-
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-JS-iIi">
@@ -212,15 +210,15 @@
             </objects>
             <point key="canvasLocation" x="-31" y="253"/>
         </scene>
-        <!--GoToMain-->
+        <!--VendingItems-->
         <scene sceneID="yDT-AF-iYa">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="GoToMain" id="Vhq-PY-npc" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="VendingItems" id="Vhq-PY-npc" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="j1k-eo-tvH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ved-eD-46C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="-548"/>
+            <point key="canvasLocation" x="706" y="-551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dj3-ON-bNM">

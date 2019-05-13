@@ -17,8 +17,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     // MARK: - Properties
     //*********************************************************
     
-    let dispatchGroup = DispatchGroup()
-    
     var docRef: DocumentReference!
     
     var db: Firestore!
@@ -111,7 +109,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
                             return
                         }
                         self.saveImageToFirebase(snackName: snack.name, snackiiImagesURL: url, completion: { success in
-//                            self.firebaseWrite(url: url.absoluteString)
                             
                             // able to go to next UIview.
                             self.performSegue(withIdentifier: "saveSnackImages", sender: self)
@@ -153,7 +150,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
             print("uid could not be found")
             return
         }
-//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
         let storageRef = Storage.storage().reference().child("snack/\(uid)/\(UUID().uuidString)")
         
@@ -203,33 +199,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         }
     }
     
-    // Add a new document with a generated ID
-    // url String helps with creating a string for the image to have a place that the image can me saved.
-//    private func firebaseWrite(url: String) {
-//        var ref: DocumentReference? = nil
-//        ref = db.collection("snacks").addDocument(data: [
-//            "imageURL": url
-//        ]) { err in
-//            if let err = err {
-//                print("Error adding document: \(err)")
-//            } else {
-//                print("Document added with ID: \(ref!.documentID)")
-//            }
-//        }
-//
-//        db.collection("snacks").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//            }
-//        }
-//    }
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return snacks.count
     }
@@ -240,11 +209,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         let storage = Storage.storage()
         let storageRef = storage.reference()
-
-//        let downloadURL = snacks[indexPath.row]
         
         guard let uid = Auth.auth().currentUser?.uid else {return}
-//        let uid = "dSMAbsP07kVSu5lmG2R55qg9Orz2"
         
         let storageDelete = storageRef.child("snack/\(uid)/")
         
@@ -289,58 +255,6 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
         
         return cell
     }
-    
-    
-    // this doesnt interact with anything right now.
-//    func handleSave() {
-//
-//        guard let image = collectionCellImage?.snackiiImagesViews.image else { return }
-//
-//        // Upload the profile image to Firebase Storage
-//        self.uploadFirebaseImages(image) { url in
-//
-//            if let url = url {
-//                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-//
-//                changeRequest?.photoURL = url
-//
-//                // write ther string of the image
-//                self.firebaseWrite(url: url.absoluteString)
-//
-//                changeRequest?.commitChanges { error in
-//                    if error == nil {
-//                        print("image Display change")
-//
-//                        // save the image data to firebase database
-//                        self.saveImageToFirebase(snackName: "", snackiiImagesURL: url ){ success in
-//                            if success {
-//                                self.dismiss(animated: true, completion: nil)
-//                            } else {
-//                                self.restForm()
-//                            }
-//                        }
-//                    } else {
-//                        print("Error: \(error!.localizedDescription)")
-//                        self.restForm()
-//                    }
-//                }
-//
-//
-//            } else {
-//                self.restForm()
-//            }
-//        }
-//
-//    }
-//
-//    // catches the error to alert you for signing up.
-//    func restForm() {
-//
-//        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
-//
-//    }
 }
 
 // helps write and print it on the iphone screen.
