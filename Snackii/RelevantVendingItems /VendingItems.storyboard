@@ -160,6 +160,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-vending-machine-50" width="50" height="50"/>
+        <image name="icons8-vending-machine-50" width="16" height="16"/>
     </resources>
 </document>
