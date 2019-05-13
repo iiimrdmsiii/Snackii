@@ -125,22 +125,8 @@ class ImageVendingItemsViewController: UIViewController,UICollectionViewDelegate
     //*********************************************************
     // MARK: - Database Cloud FireStore
     //*********************************************************
+
     
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
-    
-    func updateSnackiiImages(from url: URL) {
-        print("Start Download images")
-        getData(from: url) {data, response, error in
-            guard let data = data, error == nil else {return}
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Finished download")
-            DispatchQueue.main.async {
-                self.collectionCellImage?.snackiiImagesViews.image = UIImage(data: data)
-            }
-        }
-    }
     
     
     //*********************************************************
@@ -364,6 +350,6 @@ extension ImageVendingItemsViewController: ImageCellsCollectionViewCellDelegate 
         // to update the snack the array you need to know the index of the item that you're editing.
         // you also need to know the name of the snack (what the user typed in)
         guard let index = snackiiCollectionView.indexPath(for: cell) else { return }
-        snacks[index.row].name = text
+//        snacks[index.row].name = text
     }
 }

@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import FirebaseFirestore
-import FirebaseDatabase
+import Firebase
 
 struct Snack {
     var name: String

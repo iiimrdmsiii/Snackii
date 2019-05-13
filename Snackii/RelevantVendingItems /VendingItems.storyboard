@@ -60,7 +60,7 @@
                             <outlet property="delegate" destination="ynU-gJ-b6o" id="jqf-4u-ZQU"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="icons8-vending-machine-50" id="gGC-sC-ca8"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="gGC-sC-ca8"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhI-jF-nBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +125,4 @@
             <point key="canvasLocation" x="1917.3913043478262" y="113.83928571428571"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-vending-machine-50" width="50" height="50"/>
-    </resources>
 </document>
